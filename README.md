@@ -1,9 +1,9 @@
-SampleTree
+Data Structure.
 ==========
 
 [![Build Status](https://travis-ci.org/takecode/SampleTree.svg)](https://travis-ci.org/takecode/SampleTree)
 
-Sample Binary Tree for test.
+Studying Data Structure.
 
 
 Install
