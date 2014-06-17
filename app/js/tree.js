@@ -83,7 +83,7 @@ Tree.prototype.insert = function( number ){
         }
 
         if( this.maxDepth < node.depth ){
-            this.maxDepth = node.depth; 
+            this.maxDepth = node.depth;
         }
     }
 
@@ -97,7 +97,7 @@ Tree.prototype.findPosition = function( node ){
         this.leftstNode[depth] = node;
     }
     else{
-        var thatNode = this.leftstNode[depth];    
+        var thatNode = this.leftstNode[depth];
         var leftNode = null;
 
         while( true ){
@@ -115,7 +115,7 @@ Tree.prototype.findPosition = function( node ){
                 if( leftNode === null ){
                     this.leftstNode[depth] = node;
                     node.rightFriend = thatNode;
-                } 
+                }
                 else{
                     leftNode.rightFriend = node;
                     node.rightFriend = thatNode;

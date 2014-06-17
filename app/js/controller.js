@@ -3,10 +3,15 @@
 /**
  * Created by YeongminCha on 2014. 5. 23..
  */
-var treeAppControllers = angular.module('treeApp.Controller', []);
+var dataStructureApp= angular.module('DataStructureApp.Controller', []);
 
 // Index Controller
-treeAppControllers.controller('IndexController', ['$scope', function ( $scope ) {
+dataStructureApp.controller( 'IndexController', ['$scope', function( $scope ){
+    $scope.message = 'haha';
+}]);
+
+// Tree Controller
+dataStructureApp.controller('TreeController', ['$scope', function ( $scope ) {
     $scope.initialize= function () {
         $scope.tree = new Tree();
         $scope.treeWidth = [];
@@ -59,10 +64,10 @@ treeAppControllers.controller('IndexController', ['$scope', function ( $scope ) 
         }
         else{
             if( node === parentNode.left ){
-                node.x = parentNode.x - Math.pow( 2, $scope.tree.maxDepth - node.depth - 1 ) * width; 
+                node.x = parentNode.x - Math.pow( 2, $scope.tree.maxDepth - node.depth - 1 ) * width;
             }
             else{
-                node.x = parentNode.x + Math.pow( 2, $scope.tree.maxDepth - node.depth - 1 ) * width; 
+                node.x = parentNode.x + Math.pow( 2, $scope.tree.maxDepth - node.depth - 1 ) * width;
             }
         }
         return node.x;
@@ -83,7 +88,7 @@ treeAppControllers.controller('IndexController', ['$scope', function ( $scope ) 
 }]);
 
 // Node Controller
-treeAppControllers.controller('NodeController', ['$scope', function ( $scope ) {
+dataStructureApp.controller('NodeController', ['$scope', function ( $scope ) {
     $scope.initialize= function () {
         $scope.calculateImagePosition();
     };
@@ -111,4 +116,3 @@ treeAppControllers.controller('NodeController', ['$scope', function ( $scope ) {
 
     $scope.initialize();
 }]);
-

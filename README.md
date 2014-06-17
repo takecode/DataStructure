@@ -3,7 +3,7 @@ Data Structure.
 
 [![Build Status](https://travis-ci.org/takecode/SampleTree.svg)](https://travis-ci.org/takecode/SampleTree)
 
-Studying Data Structure.
+Studying Data Structures.
 
 
 Install
@@ -14,6 +14,7 @@ $ npm install -g grunt-cli
 $ npm install -g bower
 $ npm install
 $ bower install
+$ bower install angular-ui-router
 ```
 
 

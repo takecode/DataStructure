@@ -1,11 +1,12 @@
 /**
- * Created by YeongminCha on 14. 5. 23.
+ *
+ * Created by YeongminCha on 14. 6. 17.
  */
 
 'use strict';
 
-angular.module('SampleTreeApp',
-    [
-        'treeApp.Controller',
+angular.module('DataStructureApp',
+    ['DataStructureApp.Router',
+        'DataStructureApp.Controller',
         'ui.router'
     ]);

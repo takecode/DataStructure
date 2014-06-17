@@ -1,33 +1,37 @@
 <!doctype html>
-<html lang="en" ng-app="SampleTreeApp">
+<html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Sample Tree App</title>
+    <title>Studying Data Structures.</title>
 
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 
-    <script src="//localhost:35729/livereload.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-    <script src="js/tree.js"></script>
     <script src="js/module.js"></script>
+    <script src="js/router.js"></script>
     <script src="js/controller.js"></script>
+    <script src="js/tree.js"></script>
 </head>
-<body ng-controller="IndexController">
+<body ng-app="DataStructureApp" ng-controller="IndexController">
+<!-- NAVIGATION -->
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="navbar-header">
+        <a class="navbar-brand" ui-sref="home">Studying Data Structure</a>
+    </div>
+    <ul class="nav navbar-nav">
+        <li><a ui-sref="home">Home</a></li>
+        <li><a ui-sref="about">About</a></li>
+    </ul>
+</nav>
+<!-- MAIN CONTENT -->
+<div class="container">
 
-<form ng-submit="addNode()">
-    <input type="button" ng-click="addRandomNode()" class="btn btn-primary btn-sm" value="Add Random Number">
-    <input type="number" class="number" ng-model="number" placeholder="Type a number" />
-    <input type="submit" class="btn btn-primary btn-sm" id="submit" value="Add Number" />
-</form>
-<p>
-Count of nodes: {{tree.list.length}}
-</p>
-<span ng-if="tree.root !== null" ng-init="node = tree.root">
-    <ng-include src="'images/root.svg'">
-    </ng-include>
-</span>
+    <!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
+    <div ui-view></div>
+
+</div>
 
 </body>
 </html>

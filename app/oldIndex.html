@@ -1,0 +1,15 @@
+<div ng-controller="TreeController">
+<form ng-submit="addNode()">
+    <input type="button" ng-click="addRandomNode()" class="btn btn-primary btn-sm" value="Add Random Number">
+    <input type="number" class="number" ng-model="number" placeholder="Type a number" />
+    <input type="submit" class="btn btn-primary btn-sm" id="submit" value="Add Number" />
+</form>
+<p>
+Count of nodes: {{tree.list.length}}
+</p>
+<span ng-if="tree.root !== null" ng-init="node = tree.root">
+    <ng-include src="'images/root.svg'">
+    </ng-include>
+</span>
+
+</div>
