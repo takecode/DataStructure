@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" ng-app="SampleTreeApp">
+<head>
+    <meta charset="utf-8">
+    <title>Sample Tree App</title>
+
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+    <script src="//localhost:35729/livereload.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="js/tree.js"></script>
+    <script src="js/module.js"></script>
+    <script src="js/controller.js"></script>
+</head>
+<body ng-controller="IndexController">
+
+<form ng-submit="addNode()">
+    <input type="button" ng-click="addRandomNode()" class="btn btn-primary btn-sm" value="Add Random Number">
+    <input type="number" class="number" ng-model="number" placeholder="Type a number" />
+    <input type="submit" class="btn btn-primary btn-sm" id="submit" value="Add Number" />
+</form>
+<p>
+Count of nodes: {{tree.list.length}}
+</p>
+<span ng-if="tree.root !== null" ng-init="node = tree.root">
+    <ng-include src="'images/root.svg'">
+    </ng-include>
+</span>
+
+</body>
+</html>

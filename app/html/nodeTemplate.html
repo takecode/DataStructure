@@ -1,0 +1,13 @@
+<span ng-controller="NodeController">
+    <p>
+    Node({{node.depth}}): {{node.number}}    
+    </p>
+
+    <ng-include src="'images/node.svg'"> </ng-include>
+    <span ng-if="node.left" >
+        <ng-include ng-if="node.left" src="'html/nodeTemplate.html'" onload="node = node.left"></ng-include>
+    </span>
+    <span ng-if="node.right">
+        <ng-include ng-if="node.right" src="'html/nodeTemplate.html'" onload="node = node.right"></ng-include>
+    </span>
+</span>

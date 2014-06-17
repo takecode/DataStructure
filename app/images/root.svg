@@ -1,0 +1,5 @@
+<svg width="500" height="300"> 
+<g ng-repeat="node in tree.leftstNode" ng-include="'images/node2.svg'">
+</g>
+</svg>
+
