@@ -16,6 +16,7 @@ $ npm install
 $ bower install
 $ bower install angular-ui-router
 $ bower install angular-resource
+$ bower install bootstrap-select
 ```
 
 
