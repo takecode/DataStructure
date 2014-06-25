@@ -5,8 +5,9 @@
 
 'use strict';
 
-angular.module('DataStructureApp',
-    ['DataStructureApp.Router',
-        'DataStructureApp.Controller',
-        'ui.router'
-    ]);
+angular.module('DataStructureApp', [
+'DataStructureApp.Router',
+'ngResource',
+'DataStructureApp.Controller',
+'ui.router'
+]);

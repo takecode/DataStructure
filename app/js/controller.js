@@ -11,15 +11,16 @@ dataStructureApp.controller( 'IndexController', ['$scope', function( $scope ){
 }]);
 
 // Home Controller
-dataStructureApp.controller( 'HomeController', ['$scope', function( $scope ){
-  $scope.dataStructures = [{'name': 'Node', 'link': 'node', 'child':[{'name': 'Node', 'link': 'childNode'}, {'name': 'Chain', 'link': 'childChain'}]},
-  {'name': 'Asymptonic Notation', 'link': 'asymptonic', 'child':[]},
-  {'name': 'Arrays', 'link': 'arrays', 'child':[]}
-  ];
+dataStructureApp.controller( 'HomeController', ['$scope', '$http', function( $scope, $http ){
+    $http.get('json/DataStructures.json').success(function(data) {
+        $scope.dataStructures = data;
+    });
+    //$scope.dataStructures = [{'name':'haha','link':'hoho'}];
 }]);
 
 // Node Controller
 dataStructureApp.controller( 'NodeController', ['$scope', function( $scope ){
+    $scope.test = 'haha';
 }]);
 
 // Tree Controller
