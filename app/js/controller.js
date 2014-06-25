@@ -6,8 +6,11 @@
 var dataStructureApp= angular.module('DataStructureApp.Controller', []);
 
 // Index Controller
-dataStructureApp.controller( 'IndexController', ['$scope', function( $scope ){
-    $scope.message = 'haha';
+dataStructureApp.controller( 'IndexController', ['$scope', '$http', function( $scope, $http ){
+    $http.get('json/Users.json').success(function(data) {
+        $scope.users = data;
+        $scope.user = $scope.users[0];
+    });
 }]);
 
 // Home Controller
@@ -33,6 +36,11 @@ dataStructureApp.controller( 'NodeController', ['$scope', '$http', function( $sc
             }
         }
     };
+}]);
+
+// Node.Chain Controller
+dataStructureApp.controller( 'ChainController', ['$scope', function( $scope ){
+
 }]);
 
 // Tree Controller

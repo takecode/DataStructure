@@ -59,7 +59,8 @@ dataStructureApp.config(function($stateProvider, $urlRouterProvider) {
         })
         .state('node.chain', {
             url: '/chainOfNode',
-            templateUrl: 'html/node/chainOfNode.html'
+            templateUrl: 'html/node/chainOfNode.html',
+            controller: 'ChainController'
         })
         ;
     });

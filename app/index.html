@@ -25,6 +25,9 @@
         <li><a ui-sref="home">Home</a></li>
         <li><a ui-sref="about">About</a></li>
     </ul>
+    <p class="navbar-text navbar-right">Signed in as
+        <select ng-model="user" ng-options="theUser.name for theUser in users"></select>
+    </p>
 </nav>
 <!-- MAIN CONTENT -->
 <div class="container">
