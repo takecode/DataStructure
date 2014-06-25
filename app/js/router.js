@@ -50,8 +50,16 @@ dataStructureApp.config(function($stateProvider, $urlRouterProvider) {
         // Node Views ==========
         .state('node', {
             url: '/node',
-            templateUrl: 'html/node.html',
+            templateUrl: 'html/node/node.html',
             controller: 'NodeController'
         })
+        .state('node.node', {
+            url: '/nodeOfNode',
+            templateUrl: 'html/node/nodeOfNode.html'
+        })
+        .state('node.chain', {
+            url: '/chainOfNode',
+            templateUrl: 'html/node/chainOfNode.html'
+        })
         ;
-});
+    });

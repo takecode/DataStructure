@@ -15,12 +15,24 @@ dataStructureApp.controller( 'HomeController', ['$scope', '$http', function( $sc
     $http.get('json/DataStructures.json').success(function(data) {
         $scope.dataStructures = data;
     });
-    //$scope.dataStructures = [{'name':'haha','link':'hoho'}];
 }]);
 
 // Node Controller
-dataStructureApp.controller( 'NodeController', ['$scope', function( $scope ){
-    $scope.test = 'haha';
+dataStructureApp.controller( 'NodeController', ['$scope', '$http', function( $scope, $http ){
+    $http.get('json/DataStructures.json').success(function(data) {
+        $scope.dataStructures = data;
+        $scope.initialize();
+    });
+
+    $scope.initialize = function(){
+        var i;
+        for( i = 0; i < $scope.dataStructures.length; i++ ){
+            var dataStructure = $scope.dataStructures[i];
+            if( dataStructure.link == "node" ){
+                $scope.categories = dataStructure.child;
+            }
+        }
+    };
 }]);
 
 // Tree Controller
