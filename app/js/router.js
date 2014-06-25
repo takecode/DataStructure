@@ -14,8 +14,8 @@ dataStructureApp.config(function($stateProvider, $urlRouterProvider) {
         // HOME STATES AND NESTED VIEWS ========================================
         .state('home', {
             url: '/home',
-            templateUrl: 'html/home.html'
-
+            templateUrl: 'html/home.html',
+            controller: 'HomeController'
         })
         // nested list with custom controller
         .state('home.list', {
@@ -29,7 +29,7 @@ dataStructureApp.config(function($stateProvider, $urlRouterProvider) {
         .state('home.paragraph', {
             url: '/paragraph',
             template: 'I could sure use a drink right now.'
-        });
+        })
         // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
         .state('about', {
 
@@ -47,4 +47,11 @@ dataStructureApp.config(function($stateProvider, $urlRouterProvider) {
                 }
             }
         })
+        // Node Views ==========
+        .state('node', {
+            url: '/node',
+            templateUrl: 'html/node.html',
+            controller: 'NodeController'
+        })
+        ;
 });

@@ -1,1 +1,12 @@
-This is Home.
+<h1>
+    Data Structure
+</h1>
+<ul>
+    <li ng-repeat="dataStructure in dataStructures">
+        <p><a ui-sref="{{dataStructure.link}}">{{dataStructure.name}}</a></p>
+        <span ng-repeat="example in dataStructure.child">
+            {{example.name}}
+        </span>
+        
+    </li>
+</ul>

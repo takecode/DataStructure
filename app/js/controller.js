@@ -10,6 +10,18 @@ dataStructureApp.controller( 'IndexController', ['$scope', function( $scope ){
     $scope.message = 'haha';
 }]);
 
+// Home Controller
+dataStructureApp.controller( 'HomeController', ['$scope', function( $scope ){
+  $scope.dataStructures = [{'name': 'Node', 'link': 'node', 'child':[{'name': 'Node', 'link': 'childNode'}, {'name': 'Chain', 'link': 'childChain'}]},
+  {'name': 'Asymptonic Notation', 'link': 'asymptonic', 'child':[]},
+  {'name': 'Arrays', 'link': 'arrays', 'child':[]}
+  ];
+}]);
+
+// Node Controller
+dataStructureApp.controller( 'NodeController', ['$scope', function( $scope ){
+}]);
+
 // Tree Controller
 dataStructureApp.controller('TreeController', ['$scope', function ( $scope ) {
     $scope.initialize= function () {
@@ -87,6 +99,7 @@ dataStructureApp.controller('TreeController', ['$scope', function ( $scope ) {
     $scope.initialize();
 }]);
 
+/*
 // Node Controller
 dataStructureApp.controller('NodeController', ['$scope', function ( $scope ) {
     $scope.initialize= function () {
@@ -116,3 +129,4 @@ dataStructureApp.controller('NodeController', ['$scope', function ( $scope ) {
 
     $scope.initialize();
 }]);
+*/
