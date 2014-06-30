@@ -21,7 +21,7 @@ dataStructureApp.controller( 'HomeController', ['$scope', '$http', function( $sc
 }]);
 
 // Node Controller
-dataStructureApp.controller( 'NodeController', ['$scope', '$http', function( $scope, $http ){
+dataStructureApp.controller( 'NodeController', ['$scope', '$http', '$location', function( $scope, $http, $location ){
     $http.get('json/DataStructures.json').success(function(data) {
         $scope.dataStructures = data;
         $scope.initialize();
@@ -31,16 +31,25 @@ dataStructureApp.controller( 'NodeController', ['$scope', '$http', function( $sc
         var i;
         for( i = 0; i < $scope.dataStructures.length; i++ ){
             var dataStructure = $scope.dataStructures[i];
-            if( dataStructure.link == "node" ){
+            if( dataStructure.link === 'node' ){
                 $scope.categories = dataStructure.child;
             }
+        }
+    };
+
+    $scope.getClass = function(category) {
+        var path = $location.path();
+        if ( path.substr( path.length - category.name.length, category.name.length ) === category.name ){
+            return 'btn-primary active';
+        } else {
+            return '';
         }
     };
 }]);
 
 // Node.Chain Controller
 dataStructureApp.controller( 'ChainController', ['$scope', function( $scope ){
-
+    $scope.haha = 'haha';
 }]);
 
 // Tree Controller

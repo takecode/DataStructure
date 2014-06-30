@@ -5,8 +5,8 @@
     <li ng-repeat="dataStructure in dataStructures">
         <p><a ui-sref="{{dataStructure.link}}">{{dataStructure.name}}</a></p>
         <span ng-repeat="example in dataStructure.child">
-            {{example.name}}
+            <a ui-sref="{{dataStructure.link}}{{example.link}}">{{example.name}}</a>
         </span>
-        
+
     </li>
 </ul>

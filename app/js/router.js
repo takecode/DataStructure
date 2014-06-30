@@ -32,7 +32,7 @@ dataStructureApp.config(function($stateProvider, $urlRouterProvider) {
         })
         // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
         .state('about', {
-
+            url: '/about',
             views: {
                 // the main template will be placed here (relatively named)
                 '': { templateUrl: 'html/about.html' },
@@ -54,11 +54,11 @@ dataStructureApp.config(function($stateProvider, $urlRouterProvider) {
             controller: 'NodeController'
         })
         .state('node.node', {
-            url: '/nodeOfNode',
+            url: '/Node',
             templateUrl: 'html/node/nodeOfNode.html'
         })
         .state('node.chain', {
-            url: '/chainOfNode',
+            url: '/Chain',
             templateUrl: 'html/node/chainOfNode.html',
             controller: 'ChainController'
         })

@@ -1,5 +1,5 @@
 <span ng-repeat="category in categories">
-    <a ui-sref="{{category.link}}">
+    <a ng-class="getClass(category)" ui-sref="{{category.link}}">
         {{category.name}}
     </a>
 </span>
