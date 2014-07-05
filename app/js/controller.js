@@ -49,7 +49,20 @@ dataStructureApp.controller( 'NodeController', ['$scope', '$http', '$location', 
 
 // Node.Chain Controller
 dataStructureApp.controller( 'ChainController', ['$scope', function( $scope ){
-    $scope.haha = 'haha';
+    $scope.initialize = function(){
+        var i;
+        console.log( $scope.categories );
+        if( $scope.categories === undefined ) return;
+        for( i = 0; i < $scope.categories.length; i++ ){
+            var category = $scope.categories[i];
+            if( category.link === '.chain' ){
+                $scope.child = category;
+            }
+        }
+        console.log( $scope.child.name );
+    }
+
+    $scope.initialize();
 }]);
 
 // Tree Controller

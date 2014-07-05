@@ -1,0 +1,70 @@
+[
+    {
+        "name": "Node",
+        "link": "node",
+        "child": [ {
+                "name": "Node",
+                "link": ".node"
+
+            },
+            {
+                "name": "Chain",
+                "link": ".chain",
+                "definition":[
+                    {
+                        "name": "Node Class",
+                        "list":[
+                            {
+                                "title": "Node getNext()",
+                                "description": "return next node object"
+                            },
+                            {
+                                "title": "Object getValue()",
+                                "description": "return value of node"
+                            },
+                            {
+                                "title": "setValue( Object value )",
+                                "description": "setValue"
+                            },
+                            {
+                                "title": "setNext( Node nextNode )",
+                                "description": "set next node"
+                            }
+                        ],
+                    }
+                    {
+                        "name": "Chain Class",
+                        "list":[
+                            {
+                                "title": "getChain1()",
+                                "description": "return chain1"
+                            },
+                            {
+                                "title": "getChain2()",
+                                "description": "return chain2"
+                            },
+                            {
+                                "title": "getChain3()",
+                                "description": "return chain3"
+                            },
+                            {
+                                "title": "getChain4()",
+                                "description": "return chain4"
+                            }
+                        ],
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Asymptonic Notation",
+        "link": "asymptonic",
+        "child":[]
+    },
+    {
+        "name": "Arrays",
+        "link": "arrays",
+        "child":[]
+    }
+]
