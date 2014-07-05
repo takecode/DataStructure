@@ -52,7 +52,10 @@ dataStructureApp.controller( 'ChainController', ['$scope', function( $scope ){
     $scope.initialize = function(){
         var i;
         console.log( $scope.categories );
-        if( $scope.categories === undefined ) return;
+        if( $scope.categories === undefined ){
+            return;
+        }
+
         for( i = 0; i < $scope.categories.length; i++ ){
             var category = $scope.categories[i];
             if( category.link === '.chain' ){
@@ -60,7 +63,7 @@ dataStructureApp.controller( 'ChainController', ['$scope', function( $scope ){
             }
         }
         console.log( $scope.child.name );
-    }
+    };
 
     $scope.initialize();
 }]);
