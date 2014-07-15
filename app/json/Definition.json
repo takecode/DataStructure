@@ -22,7 +22,7 @@
     {
         "name": "Chain of Node",
         "id": "chainOfNode",
-        "definition":[
+        "definitions":[
             {
                 "title": "getChain1()",
                 "description": "return chain1"

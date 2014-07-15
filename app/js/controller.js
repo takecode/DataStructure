@@ -33,7 +33,7 @@ dataStructureApp.controller( 'HomeController', ['$scope', 'DataStructureFactory'
 // Chapter Controller
 dataStructureApp.controller( 'ChapterController',
 ['$scope', '$location', '$stateParams', 'DataStructureFactory', 'UrlService',
-function( $scope, '$location', $stateParams, DataStructureFactory, UrlService ){
+function( $scope, $location, $stateParams, DataStructureFactory, UrlService ){
     $scope.initialize = function(){
         var i;
         $scope.dataStructures = DataStructureFactory.list;
@@ -41,19 +41,15 @@ function( $scope, '$location', $stateParams, DataStructureFactory, UrlService ){
             var dataStructure = $scope.dataStructures[i];
             if( dataStructure.id === $stateParams.chapterId ){
                 $scope.subs = dataStructure.subs;
-                console.log( $scope.subs );
             }
         }
     };
 
     $scope.getClass = function( id ) {
+        var path = $location.path();
+        var word = UrlService.getLastWord( path );
 
-        console.log( id );
-
-        if( id === undefined ){
-            return '';
-        }
-        if( id === sub.id ){
+        if( id === word ){
             return 'btn-primary active';
         } else {
             return '';
@@ -73,49 +69,6 @@ function( $scope, $stateParams, StateService, DefinitionFactory ){
         for( var count in $scope.definitionList ){
             var definition = $scope.definitionList[count];
             if( definition.id === $stateParams.subChapterId ){
-                $scope.definitions = definition.definitions;
-            }
-        }
-    };
-
-    $scope.initialize();
-}]);
-
-// Node Controller
-dataStructureApp.controller( 'NodeController',
- ['$scope', '$state', 'DataStructureFactory', 'StateService',
- function( $scope, $state, DataStructureFactory, StateService ){
-    $scope.initialize = function(){
-        var i;
-        $scope.dataStructures = DataStructureFactory.list;
-        if( $scope.dataStructures === undefined ) return;
-        for( i = 0; i < $scope.dataStructures.length; i++ ){
-            var dataStructure = $scope.dataStructures[i];
-            if( dataStructure.state === StateService.getFirstState( $state.current.name ) ){
-                $scope.categories = dataStructure.child;
-            }
-        }
-    };
-
-    $scope.getClass = function(category) {
-        if( $state.is( category.state ) ){
-            return 'btn-primary active';
-        } else {
-            return '';
-        }
-    };
-
-    $scope.initialize();
-}]);
-
-// Node.Chain Controller
-dataStructureApp.controller( 'ChainController', ['$scope', '$state', 'StateService', 'DefinitionFactory',
- function( $scope, $state, StateService, DefinitionFactory ){
-    $scope.initialize = function(){
-        $scope.definitionList = DefinitionFactory.list;
-        for( var count in $scope.definitionList ){
-            var definition = $scope.definitionList[count];
-            if( definition.name === "Node of Node" ){
                 $scope.definitions = definition.definitions;
             }
         }
