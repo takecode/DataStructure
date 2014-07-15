@@ -5,7 +5,7 @@
  */
 var dataStructureApp= angular.module('DataStructureApp.Factory', []);
 
-dataStructureApp.factory( 'DataStructure', function(){
+dataStructureApp.factory( 'DataStructureFactory', function(){
     var factory = {};
 
     factory.list = [];
@@ -13,7 +13,7 @@ dataStructureApp.factory( 'DataStructure', function(){
     return factory;
 });
 
-dataStructureApp.factory( 'Definition', function(){
+dataStructureApp.factory( 'DefinitionFactory', function(){
     var factory = {};
 
     factory.list = [];

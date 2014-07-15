@@ -5,6 +5,13 @@
  */
 var dataStructureApp= angular.module('DataStructureApp.Service', []);
 
+dataStructureApp.service( 'StateService', function(){
+    this.getFirstState = function( state ){
+        var stateList = state.split( '.' );
+        return stateList[0];
+    }
+});
+
 dataStructureApp.service( 'UrlService', function(){
     this.getLastWord = function( url ){
         var wordList = this.getWordList( url );

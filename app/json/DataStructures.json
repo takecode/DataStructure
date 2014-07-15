@@ -2,13 +2,16 @@
 [
     {
         "name": "Node",
+        "state": "node",
         "link": "node",
         "child": [ {
-                "name": "NodeOfNode",
+                "name": "Node of Node",
+                "state": "node.node",
                 "link": ".node"
             },
             {
-                "name": "ChainOfNode",
+                "name": "Chain of node",
+                "state": "node.chain",
                 "link": ".chain"
             }
         ]

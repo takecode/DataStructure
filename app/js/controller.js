@@ -7,47 +7,47 @@ var dataStructureApp= angular.module('DataStructureApp.Controller', []);
 
 // Index Controller
 dataStructureApp.controller( 'IndexController',
- ['$scope', '$http', 'DataStructure', 'Definition',
- function( $scope, $http, DataStructure, Definition ){
+ ['$scope', '$http', 'DataStructureFactory', 'DefinitionFactory',
+ function( $scope, $http, DataStructureFactory, DefinitionFactory ){
      $http.get('json/Users.json').success(function(data) {
          $scope.users = data;
          $scope.user = $scope.users[0];
      });
 
      $http.get('json/DataStructures.json').success(function(data) {
-         DataStructure.list = data;
+         DataStructureFactory.list = data;
      });
 
      $http.get('json/Definition.json').success(function(data) {
-         Definition.list = data;
+         DefinitionFactory.list = data;
      });
 
  }]);
 
 // Home Controller
-dataStructureApp.controller( 'HomeController', ['$scope', 'DataStructure', function( $scope, DataStructure ){
-    $scope.dataStructures = DataStructure.list;
+dataStructureApp.controller( 'HomeController', ['$scope', 'DataStructureFactory',
+ function( $scope, DataStructureFactory ){
+    $scope.dataStructures = DataStructureFactory.list;
 }]);
 
 // Node Controller
 dataStructureApp.controller( 'NodeController',
- ['$scope', '$http', '$location', 'DataStructure', 'UrlService',
- function( $scope, $http, $location, DataStructure, UrlService ){
+ ['$scope', '$state', 'DataStructureFactory', 'StateService',
+ function( $scope, $state, DataStructureFactory, StateService ){
     $scope.initialize = function(){
-
         var i;
-        $scope.dataStructures = DataStructure.list;
+        $scope.dataStructures = DataStructureFactory.list;
+        if( $scope.dataStructures === undefined ) return;
         for( i = 0; i < $scope.dataStructures.length; i++ ){
             var dataStructure = $scope.dataStructures[i];
-            if( dataStructure.link === 'node' ){
+            if( dataStructure.state === StateService.getFirstState( $state.current.name ) ){
                 $scope.categories = dataStructure.child;
             }
         }
     };
 
     $scope.getClass = function(category) {
-        var path = $location.path();
-        if ( UrlService.getLastWord( path ) === category.name ){
+        if( $state.is( category.state ) ){
             return 'btn-primary active';
         } else {
             return '';

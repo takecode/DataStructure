@@ -47,6 +47,16 @@ dataStructureApp.config(function($stateProvider, $urlRouterProvider) {
                 }
             }
         })
+        .state( 'chapter', {
+            url: '/chapter',
+            templateUrl: 'html/chapter.html',
+            controller: 'ChapterController'
+        })
+        .state( 'chapter.sub', {
+            url: '/subChapter',
+            templateUrl: 'html/subChapter.html',
+            controller: 'SubChapterController'
+        })
         // Node Views ==========
         .state('node', {
             url: '/node',
@@ -54,11 +64,11 @@ dataStructureApp.config(function($stateProvider, $urlRouterProvider) {
             controller: 'NodeController'
         })
         .state('node.node', {
-            url: '/NodeOfNode',
+            url: '/node',
             templateUrl: 'html/node/nodeOfNode.html'
         })
         .state('node.chain', {
-            url: '/ChainOfNode',
+            url: '/chain',
             templateUrl: 'html/node/chainOfNode.html',
             controller: 'ChainController'
         })
