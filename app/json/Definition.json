@@ -24,8 +24,8 @@
         "id": "chainOfNode",
         "definitions":[
             {
-                "title": "getChain1()",
-                "description": "return chain1"
+                "title": "Definition",
+                "description": "Building a Chain Class"
             },
             {
                 "title": "getChain2()",

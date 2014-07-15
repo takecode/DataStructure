@@ -1,6 +1,8 @@
+[
 <span ng-repeat="sub in subs">
     <a ng-class="getClass(sub.id)" ui-sref="chapter.sub({ subChapterId: sub.id })">
         {{sub.name}}
     </a>
 </span>
+]
 <div ui-view></div>
