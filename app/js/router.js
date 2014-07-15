@@ -54,11 +54,11 @@ dataStructureApp.config(function($stateProvider, $urlRouterProvider) {
             controller: 'NodeController'
         })
         .state('node.node', {
-            url: '/Node',
+            url: '/NodeOfNode',
             templateUrl: 'html/node/nodeOfNode.html'
         })
         .state('node.chain', {
-            url: '/Chain',
+            url: '/ChainOfNode',
             templateUrl: 'html/node/chainOfNode.html',
             controller: 'ChainController'
         })

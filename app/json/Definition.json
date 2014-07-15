@@ -1,6 +1,6 @@
 [
     {
-        "name": "nodeOfChain",
+        "name": "NodeOfNode",
         "definition": [
             {
                 "title": "Definition",
@@ -17,11 +17,10 @@
                 ]
             }
         ]
-    }
     },
     {
-        "name": "Chain Class",
-        "list":[
+        "name": "ChainOfNode",
+        "definition":[
             {
                 "title": "getChain1()",
                 "description": "return chain1"
@@ -38,6 +37,6 @@
                 "title": "getChain4()",
                 "description": "return chain4"
             }
-        ],
+        ]
     }
 ]

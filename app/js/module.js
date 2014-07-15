@@ -9,5 +9,6 @@ angular.module('DataStructureApp', [
 'DataStructureApp.Router',
 'ngResource',
 'DataStructureApp.Controller',
+'DataStructureApp.Factory',
 'ui.router'
 ]);

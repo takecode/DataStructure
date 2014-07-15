@@ -4,11 +4,11 @@
         "name": "Node",
         "link": "node",
         "child": [ {
-                "name": "Node",
+                "name": "NodeOfNode",
                 "link": ".node"
             },
             {
-                "name": "Chain",
+                "name": "ChainOfNode",
                 "link": ".chain"
             }
         ]

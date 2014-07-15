@@ -6,29 +6,36 @@
 var dataStructureApp= angular.module('DataStructureApp.Controller', []);
 
 // Index Controller
-dataStructureApp.controller( 'IndexController', ['$scope', '$http', function( $scope, $http ){
-    $http.get('json/Users.json').success(function(data) {
-        $scope.users = data;
-        $scope.user = $scope.users[0];
-    });
-}]);
+dataStructureApp.controller( 'IndexController',
+ ['$scope', '$http', 'DataStructure', 'Definition',
+ function( $scope, $http, DataStructure, Definition ){
+     $http.get('json/Users.json').success(function(data) {
+         $scope.users = data;
+         $scope.user = $scope.users[0];
+     });
+
+     $http.get('json/DataStructures.json').success(function(data) {
+         DataStructure.list = data;
+     });
+
+     $http.get('json/Definition.json').success(function(data) {
+         Definition.list = data;
+     });
+
+ }]);
 
 // Home Controller
-dataStructureApp.controller( 'HomeController', ['$scope', '$http', function( $scope, $http ){
-    $http.get('json/DataStructures.json').success(function(data) {
-        $scope.dataStructures = data;
-    });
+dataStructureApp.controller( 'HomeController', ['$scope', 'DataStructure', function( $scope, DataStructure ){
+    $scope.dataStructures = DataStructure.list;
 }]);
 
 // Node Controller
-dataStructureApp.controller( 'NodeController', ['$scope', '$http', '$location', function( $scope, $http, $location ){
-    $http.get('json/DataStructures.json').success(function(data) {
-        $scope.dataStructures = data;
-        $scope.initialize();
-    });
-
+dataStructureApp.controller( 'NodeController',
+ ['$scope', '$http', '$location', 'DataStructure',
+ function( $scope, $http, $location, DataStructure ){
     $scope.initialize = function(){
         var i;
+        $scope.dataStructures = DataStructure.list;
         for( i = 0; i < $scope.dataStructures.length; i++ ){
             var dataStructure = $scope.dataStructures[i];
             if( dataStructure.link === 'node' ){
@@ -45,13 +52,15 @@ dataStructureApp.controller( 'NodeController', ['$scope', '$http', '$location', 
             return '';
         }
     };
+
+    $scope.initialize();
 }]);
 
 // Node.Chain Controller
 dataStructureApp.controller( 'ChainController', ['$scope', function( $scope ){
     $scope.initialize = function(){
         var i;
-        console.log( $scope.categories );
+        console.log( $scope.category );
         if( $scope.categories === undefined ){
             return;
         }
@@ -62,7 +71,6 @@ dataStructureApp.controller( 'ChainController', ['$scope', function( $scope ){
                 $scope.child = category;
             }
         }
-        console.log( $scope.child.name );
     };
 
     $scope.initialize();
