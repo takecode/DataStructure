@@ -1,6 +1,7 @@
 [
     {
         "name": "Node of Node",
+        "id": "nodeOfNode",
         "definitions": [
             {
                 "title": "Definition",
@@ -20,6 +21,7 @@
     },
     {
         "name": "Chain of Node",
+        "id": "chainOfNode",
         "definition":[
             {
                 "title": "getChain1()",

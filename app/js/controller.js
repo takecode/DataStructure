@@ -30,6 +30,57 @@ dataStructureApp.controller( 'HomeController', ['$scope', 'DataStructureFactory'
     $scope.dataStructures = DataStructureFactory.list;
 }]);
 
+// Chapter Controller
+dataStructureApp.controller( 'ChapterController',
+['$scope', '$location', '$stateParams', 'DataStructureFactory', 'UrlService',
+function( $scope, '$location', $stateParams, DataStructureFactory, UrlService ){
+    $scope.initialize = function(){
+        var i;
+        $scope.dataStructures = DataStructureFactory.list;
+        for( i = 0; i < $scope.dataStructures.length; i++ ){
+            var dataStructure = $scope.dataStructures[i];
+            if( dataStructure.id === $stateParams.chapterId ){
+                $scope.subs = dataStructure.subs;
+                console.log( $scope.subs );
+            }
+        }
+    };
+
+    $scope.getClass = function( id ) {
+
+        console.log( id );
+
+        if( id === undefined ){
+            return '';
+        }
+        if( id === sub.id ){
+            return 'btn-primary active';
+        } else {
+            return '';
+        }
+    };
+
+    $scope.initialize();
+
+}]);
+
+// Sub Chapter Controller
+dataStructureApp.controller( 'SubChapterController',
+['$scope', '$stateParams', 'StateService', 'DefinitionFactory',
+function( $scope, $stateParams, StateService, DefinitionFactory ){
+    $scope.initialize = function(){
+        $scope.definitionList = DefinitionFactory.list;
+        for( var count in $scope.definitionList ){
+            var definition = $scope.definitionList[count];
+            if( definition.id === $stateParams.subChapterId ){
+                $scope.definitions = definition.definitions;
+            }
+        }
+    };
+
+    $scope.initialize();
+}]);
+
 // Node Controller
 dataStructureApp.controller( 'NodeController',
  ['$scope', '$state', 'DataStructureFactory', 'StateService',

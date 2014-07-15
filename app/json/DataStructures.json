@@ -1,16 +1,19 @@
 
 [
     {
+        "id": "node",
         "name": "Node",
         "state": "node",
         "link": "node",
-        "child": [ {
-                "name": "Node of Node",
+        "subs": [ {
+                "id": "nodeOfNode",
+                "name": "Node",
                 "state": "node.node",
                 "link": ".node"
             },
             {
-                "name": "Chain of node",
+                "id": "chainOfNode",
+                "name": "Chain",
                 "state": "node.chain",
                 "link": ".chain"
             }
@@ -19,11 +22,11 @@
     {
         "name": "Asymptonic Notation",
         "link": "asymptonic",
-        "child":[]
+        "subs":[]
     },
     {
         "name": "Arrays",
         "link": "arrays",
-        "child":[]
+        "subs":[]
     }
 ]

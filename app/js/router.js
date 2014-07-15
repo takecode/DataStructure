@@ -48,12 +48,12 @@ dataStructureApp.config(function($stateProvider, $urlRouterProvider) {
             }
         })
         .state( 'chapter', {
-            url: '/chapter',
+            url: '/chapter/:chapterId',
             templateUrl: 'html/chapter.html',
             controller: 'ChapterController'
         })
         .state( 'chapter.sub', {
-            url: '/subChapter',
+            url: '/subChapter/:subChapterId',
             templateUrl: 'html/subChapter.html',
             controller: 'SubChapterController'
         })
