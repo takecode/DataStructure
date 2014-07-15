@@ -58,17 +58,14 @@ dataStructureApp.controller( 'NodeController',
 }]);
 
 // Node.Chain Controller
-dataStructureApp.controller( 'ChainController', ['$scope', function( $scope ){
+dataStructureApp.controller( 'ChainController', ['$scope', '$state', 'StateService', 'DefinitionFactory',
+ function( $scope, $state, StateService, DefinitionFactory ){
     $scope.initialize = function(){
-        var i;
-        if( $scope.categories === undefined ){
-            return;
-        }
-
-        for( i = 0; i < $scope.categories.length; i++ ){
-            var category = $scope.categories[i];
-            if( category.link === '.chain' ){
-                $scope.child = category;
+        $scope.definitionList = DefinitionFactory.list;
+        for( var count in $scope.definitionList ){
+            var definition = $scope.definitionList[count];
+            if( definition.name === "Node of Node" ){
+                $scope.definitions = definition.definitions;
             }
         }
     };

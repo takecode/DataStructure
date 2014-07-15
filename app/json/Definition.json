@@ -1,7 +1,7 @@
 [
     {
-        "name": "NodeOfNode",
-        "definition": [
+        "name": "Node of Node",
+        "definitions": [
             {
                 "title": "Definition",
                 "description": "Building a Node class"
@@ -19,7 +19,7 @@
         ]
     },
     {
-        "name": "ChainOfNode",
+        "name": "Chain of Node",
         "definition":[
             {
                 "title": "getChain1()",
