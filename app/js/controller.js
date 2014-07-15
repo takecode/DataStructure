@@ -31,9 +31,10 @@ dataStructureApp.controller( 'HomeController', ['$scope', 'DataStructure', funct
 
 // Node Controller
 dataStructureApp.controller( 'NodeController',
- ['$scope', '$http', '$location', 'DataStructure',
- function( $scope, $http, $location, DataStructure ){
+ ['$scope', '$http', '$location', 'DataStructure', 'UrlService',
+ function( $scope, $http, $location, DataStructure, UrlService ){
     $scope.initialize = function(){
+
         var i;
         $scope.dataStructures = DataStructure.list;
         for( i = 0; i < $scope.dataStructures.length; i++ ){
@@ -46,7 +47,7 @@ dataStructureApp.controller( 'NodeController',
 
     $scope.getClass = function(category) {
         var path = $location.path();
-        if ( path.substr( path.length - category.name.length, category.name.length ) === category.name ){
+        if ( UrlService.getLastWord( path ) === category.name ){
             return 'btn-primary active';
         } else {
             return '';
@@ -60,7 +61,6 @@ dataStructureApp.controller( 'NodeController',
 dataStructureApp.controller( 'ChainController', ['$scope', function( $scope ){
     $scope.initialize = function(){
         var i;
-        console.log( $scope.category );
         if( $scope.categories === undefined ){
             return;
         }
