@@ -1,17 +1,17 @@
 
 [
     {
-        "id": "node",
+        "id": "nodeChapter",
         "name": "Node",
         "link": "node",
-        "defaultId": "nodeOfNode",
+        "defaultId": "node",
         "subs": [ {
-                "id": "nodeOfNode",
+                "id": "node",
                 "name": "Node",
                 "link": ".node"
             },
             {
-                "id": "chainOfNode",
+                "id": "chain",
                 "name": "Chain",
                 "link": ".chain"
             }

@@ -1,7 +1,7 @@
 [
     {
-        "name": "Node of Node",
-        "id": "nodeOfNode",
+        "name": "Node",
+        "id": "node",
         "definitions": [
             {
                 "title": "Definition",
@@ -21,12 +21,12 @@
         ]
     },
     {
-        "name": "Chain of Node",
-        "id": "chainOfNode",
+        "name": "Chain",
+        "id": "chain",
         "definitions":[
             {
                 "title": "Definition",
-                "description": "Building a Chain Class"
+                "description": "Building a Chain From Nodes"
             },
             {
                 "title": "getChain2()",
