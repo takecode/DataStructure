@@ -1,6 +1,5 @@
 [
     {
-        "name": "Node",
         "id": "node",
         "definitions": [
             {
@@ -11,34 +10,47 @@
                 "title": "Node",
                 "description": "Class of Node",
                 "list":[
-                    "Constructor( Element value, Node nextNode ) : Create a new node, with value as its contained value and next as the value of the next pointer",
-                    "Node getNext() : Returns the value of node's next pointer",
-                    "Element getValue() : Returns the value contained in node n",
-                    "setValue( Element value ) : Sets the contained value to be value",
-                    "setNext( Node nextNode ) : Sets the value of node's next pointer to be nextNode"
+                    "Constructor( Element value, Node nextNode ): Create a new node, with value as its contained value and next as the value of the next pointer",
+                    "Node getNext(): Returns the value of node's next pointer",
+                    "Element getValue(): Returns the value contained in node n",
+                    "setValue( Element value ): Sets the contained value to be value",
+                    "setNext( Node nextNode ): Sets the value of node's next pointer to be nextNode"
                 ]
             }
         ]
     },
     {
-        "name": "Chain",
         "id": "chain",
         "definitions":[
             {
                 "title": "Definition",
-                "description": "Building a Chain From Nodes"
+                "description": "Building a Chain From Nodes."
             },
             {
-                "title": "getChain2()",
-                "description": "return chain2"
-            },
+                "title": "Chain",
+                "description": "Class Of Chain",
+                "list":[
+                    "Constructuctor(): Create a new chain",
+                    "put( Node node ): put a node to this chain",
+                    "Node getFirstNode(): get the first node of this chain",
+                    "removeNode( Node node ): remove the node if exist"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "asymptonicNotation",
+        "definitions":[
             {
-                "title": "getChain3()",
-                "description": "return chain3"
-            },
-            {
-                "title": "getChain4()",
-                "description": "return chain4"
+                "title": "Asymptonic Notation",
+                "description": "A problem may have numerous algorithmic solutions. In order to choose the best algorithm for a particular task, you need to be able to judge how long a particular solution will take to run. Or, more accurately, you need to be able to judge how long two solutions will take to run, and choose the better of the two.",
+                "list":[
+                    "The O Notation",
+                    "Big-Omega Notation",
+                    "Theta Notation",
+                    "Little-O Notation",
+                    "Little Omega Notation"
+                ]
             }
         ]
     }

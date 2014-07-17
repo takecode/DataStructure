@@ -1,30 +1,39 @@
 
 [
     {
-        "id": "nodeChapter",
         "name": "Node",
-        "link": "node",
+        "id": "nodeChapter",
         "defaultId": "node",
         "subs": [ {
-                "id": "node",
                 "name": "Node",
-                "link": ".node"
+                "id": "node"
             },
             {
-                "id": "chain",
                 "name": "Chain",
-                "link": ".chain"
+                "id": "chain"
             }
         ]
     },
     {
         "name": "Asymptonic Notation",
-        "link": "asymptonic",
-        "subs":[]
+        "id": "asymptonicNotationChapter",
+        "defaultId": "asymptonicNotation",
+        "subs":[
+            {
+                "name": "Asymptonic Notation",
+                "id": "asymptonicNotation"
+            }
+        ]
     },
     {
         "name": "Arrays",
-        "link": "arrays",
-        "subs":[]
+        "id": "arraysChapter",
+        "defaultId": "array",
+        "subs":[
+            {
+                "name": "Array",
+                "id": "array"
+            }
+        ]
     }
 ]
