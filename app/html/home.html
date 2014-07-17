@@ -3,10 +3,10 @@
 </h1>
 <ul>
     <li ng-repeat="dataStructure in dataStructures">
-        <p><a ui-sref="chapter({ chapterId: dataStructure.id })">{{dataStructure.name}}</a>
+        <p><a ui-sref="chapter.sub({ chapterId: dataStructure.id, subChapterId: dataStructure.defaultId })">{{dataStructure.name}}</a>
         [
         <span ng-repeat="sub in dataStructure.subs">
-            <a ui-sref="chapter.sub({ subChapterId: sub.id })">{{sub.name}}</a>
+            <a ui-sref="chapter.sub({ chapterId: dataStructure.id, subChapterId: sub.id })">{{sub.name}}</a>
         </span>
         ]
         </p>

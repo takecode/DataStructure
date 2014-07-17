@@ -32,24 +32,24 @@ dataStructureApp.controller( 'HomeController', ['$scope', 'DataStructureFactory'
 
 // Chapter Controller
 dataStructureApp.controller( 'ChapterController',
-['$scope', '$location', '$stateParams', 'DataStructureFactory', 'UrlService',
-function( $scope, $location, $stateParams, DataStructureFactory, UrlService ){
+['$scope', '$location', '$state', '$stateParams', 'DataStructureFactory', 'UrlService',
+function( $scope, $location, $state, $stateParams, DataStructureFactory, UrlService ){
     $scope.initialize = function(){
-        var i;
         $scope.dataStructures = DataStructureFactory.list;
-        for( i = 0; i < $scope.dataStructures.length; i++ ){
-            var dataStructure = $scope.dataStructures[i];
+        for( var count in $scope.dataStructures ){
+            var dataStructure = $scope.dataStructures[count];
             if( dataStructure.id === $stateParams.chapterId ){
+                $scope.dataStructure = dataStructure;
                 $scope.subs = dataStructure.subs;
             }
         }
     };
 
-    $scope.getClass = function( id ) {
+    $scope.getClass = function( theId ) {
         var path = $location.path();
-        var word = UrlService.getLastWord( path );
+        var id = UrlService.getLastWord( path );
 
-        if( id === word ){
+        if( id === theId ){
             return 'btn-primary active';
         } else {
             return '';

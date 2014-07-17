@@ -4,6 +4,7 @@
         "id": "node",
         "name": "Node",
         "link": "node",
+        "defaultId": "nodeOfNode",
         "subs": [ {
                 "id": "nodeOfNode",
                 "name": "Node",

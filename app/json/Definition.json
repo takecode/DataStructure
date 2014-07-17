@@ -1,21 +1,11 @@
 [
     {
-        "name": "Node",
-        "id": "node",
-        "definitions": [
-            {
-                "title": "Definition",
-                "description": "This is Node."
-            }
-        ]
-    },
-    {
         "name": "Node of Node",
         "id": "nodeOfNode",
         "definitions": [
             {
                 "title": "Definition",
-                "description": "Building a Node class"
+                "description": "A node is simply a container for a value, plus a pointer to a \"next\" node (which may be null)."
             },
             {
                 "title": "Node",
