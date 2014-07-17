@@ -3,18 +3,15 @@
     {
         "id": "node",
         "name": "Node",
-        "state": "node",
         "link": "node",
         "subs": [ {
                 "id": "nodeOfNode",
                 "name": "Node",
-                "state": "node.node",
                 "link": ".node"
             },
             {
                 "id": "chainOfNode",
                 "name": "Chain",
-                "state": "node.chain",
                 "link": ".chain"
             }
         ]

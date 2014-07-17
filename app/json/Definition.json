@@ -1,5 +1,15 @@
 [
     {
+        "name": "Node",
+        "id": "node",
+        "definitions": [
+            {
+                "title": "Definition",
+                "description": "This is Node."
+            }
+        ]
+    },
+    {
         "name": "Node of Node",
         "id": "nodeOfNode",
         "definitions": [
@@ -11,10 +21,11 @@
                 "title": "Node",
                 "description": "Class of Node",
                 "list":[
-                    "Node getNext() : return next node object",
-                    "Object getValue() : return value of node",
-                    "setValue( Object value ) : set value",
-                    "setNext( Node nextNode ) : set next node"
+                    "Constructor( Element value, Node nextNode ) : Create a new node, with value as its contained value and next as the value of the next pointer",
+                    "Node getNext() : Returns the value of node's next pointer",
+                    "Element getValue() : Returns the value contained in node n",
+                    "setValue( Element value ) : Sets the contained value to be value",
+                    "setNext( Node nextNode ) : Sets the value of node's next pointer to be nextNode"
                 ]
             }
         ]
