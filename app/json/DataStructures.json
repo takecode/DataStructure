@@ -5,11 +5,13 @@
         "defaultId": "node",
         "subs": [ {
                 "name": "Node",
-                "id": "node"
+                "id": "node",
+                "hasCode": true
             },
             {
                 "name": "Chain",
-                "id": "chain"
+                "id": "chain",
+                "hasCode": true
             }
         ]
     },

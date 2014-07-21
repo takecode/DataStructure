@@ -1,11 +1,14 @@
 <h1>
-    Data Structure
+    Data Structure <font size="-4">( &#9733; means has a code )</font>
 </h1>
 <ul>
     <li ng-repeat="dataStructure in dataStructures">
         <p>
         <span ng-repeat="sub in dataStructure.subs">
-            <a ui-sref="chapter.sub({ chapterId: dataStructure.id, subChapterId: sub.id })">{{sub.name}}</a>
+            <a ui-sref="chapter.sub({ chapterId: dataStructure.id, subChapterId: sub.id })">
+                {{sub.name}}
+                <span ng-show="sub.hasCode">&#9733;</span>
+            </a>
             <span ng-show="$first && !$last"> [ </span>
             <span ng-hide="$last || $first"> - </span>
             <span ng-show="$last && !$first"> ] </span>
