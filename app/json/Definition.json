@@ -4,11 +4,11 @@
         "definitions": [
             {
                 "title": "Definition",
-                "description": "A node is simply a container for a value, plus a pointer to a \"next\" node (which may be null)."
+                "description": "The primitive node structure"
             },
             {
-                "title": "Node",
-                "description": "Class of Node",
+                "title": "Node Class",
+                "description": "A node is simply a container for a value, plus a pointer to a \"next\" node (which may be null).",
                 "list":[
                     "Constructor( Element value, Node nextNode ): Create a new node, with value as its contained value and next as the value of the next pointer",
                     "Node getNext(): Returns the value of node's next pointer",
@@ -43,7 +43,7 @@
         "definitions":[
             {
                 "title": "Asymptonic Notation",
-                "description": "A problem may have numerous algorithmic solutions. In order to choose the best algorithm for a particular task, you need to be able to judge how long a particular solution will take to run. Or, more accurately, you need to be able to judge how long two solutions will take to run, and choose the better of the two.",
+                "description": "asymptotic notation for mathematically discussing performance characteristics",
                 "list":[
                     "The O Notation",
                     "Big-Omega Notation",
@@ -51,6 +51,78 @@
                     "Little-O Notation",
                     "Little Omega Notation"
                 ]
+            }
+        ]
+    },
+    {
+        "id": "array",
+        "definitions":[
+            {
+                "title": "Array",
+                "description": "built-in arrays"
+            }
+        ]
+    },
+    {
+        "id": "listStructure",
+        "definitions":[
+            {
+                "title": "List Structures",
+                "description": "List structures built from either nodes or arrays"
+            }
+        ]
+    },
+    {
+        "id": "iterator",
+        "definitions":[
+            {
+                "title": "Iterator",
+                "description": "Iterators as an abstract model of enumerating the items in a sequence"
+            }
+        ]
+    },
+    {
+        "id": "stackAndQueue",
+        "definitions":[
+            {
+                "title": "Stack & Queue",
+                "description": "Stacks and queues for computing with last-in/first-out and first-in/first-out orderings"
+            }
+        ]
+    },
+    {
+        "id": "tree",
+        "definitions":[
+            {
+                "title": "Tree",
+                "description": "Binary and general tree structures for searching or representing hierarchical relationships"
+            }
+        ]
+    },
+    {
+        "id": "heap",
+        "definitions":[
+            {
+                "title": "Heap",
+                "description": "Min and max heaps for representing ordering based on priorities"
+            }
+        ]
+    },
+    {
+        "id": "graph",
+        "definitions":[
+            {
+                "title": "Graph",
+                "description": "Graph structures for representing more general relationships between data elements"
+            }
+        ]
+    },
+    {
+        "id": "hash",
+        "definitions":[
+            {
+                "title": "Hash Table",
+                "description": "Hash tables for the efficient retrieval of strings and other objects"
             }
         ]
     }

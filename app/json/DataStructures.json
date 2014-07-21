@@ -26,13 +26,90 @@
         ]
     },
     {
-        "name": "Arrays",
+        "name": "Array",
         "id": "arraysChapter",
         "defaultId": "array",
         "subs":[
             {
                 "name": "Array",
                 "id": "array"
+            }
+        ]
+    },
+    {
+        "name": "List Structure",
+        "id": "listStructureChapter",
+        "defaultId": "listStructure",
+        "subs":[
+            {
+                "name": "List Structure",
+                "id": "listStructure"
+            }
+        ]
+    },
+    {
+        "name": "Iterator",
+        "id": "iteratorChapter",
+        "defaultId": "iterator",
+        "subs":[
+            {
+                "name": "Iterator",
+                "id": "iterator"
+            }
+        ]
+    },
+    {
+        "name": "Stack & Queue",
+        "id": "stackAndQueueChapter",
+        "defaultId": "stackAndQueue",
+        "subs":[
+            {
+                "name": "Stack & Queue",
+                "id": "stackAndQueue"
+            }
+        ]
+    },
+    {
+        "name": "Tree",
+        "id": "treeChapter",
+        "defaultId": "tree",
+        "subs":[
+            {
+                "name": "Tree",
+                "id": "tree"
+            }
+        ]
+    },
+    {
+        "name": "Heap",
+        "id": "heapChapter",
+        "defaultId": "heap",
+        "subs":[
+            {
+                "name": "Heap",
+                "id": "heap"
+            }
+        ]
+    },
+    {
+        "name": "Graph",
+        "id": "graphChapter",
+        "defaultId": "graph",
+        "subs":[
+            {
+                "name": "Graph",
+                "id": "graph"
+            }
+        ]
+    },
+    {
+        "name": "Hash Table",
+        "id": "hashChapter",
+        "defaultId": "hash",
+        "subs":[
+            {
+                "name": "Hash Table",
+                "id": "hash"
             }
         ]
     }

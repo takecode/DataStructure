@@ -5,8 +5,9 @@
     <li ng-repeat="dataStructure in dataStructures">
         <p><a ui-sref="chapter.sub({ chapterId: dataStructure.id, subChapterId: dataStructure.defaultId })">{{dataStructure.name}}</a>
         [
-        <span ng-repeat="sub in dataStructure.subs">
+        <span ng-repeat="sub in dataStructure.subs" ng-show="!$first">
             <a ui-sref="chapter.sub({ chapterId: dataStructure.id, subChapterId: sub.id })">{{sub.name}}</a>
+            <span ng-hide="$last"> - </span>
         </span>
         ]
         </p>
