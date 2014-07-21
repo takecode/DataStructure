@@ -108,6 +108,15 @@
         ]
     },
     {
+        "id": "singlyLinkedList",
+        "definitions":[
+            {
+                "title": "Singly Linked List",
+                "description": "Singly Linked List"
+            }
+        ]
+    },
+    {
         "id": "stackAndQueue",
         "definitions":[
             {

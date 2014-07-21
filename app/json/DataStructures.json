@@ -1,7 +1,6 @@
 
 [
     {
-        "name": "Node",
         "id": "nodeChapter",
         "defaultId": "node",
         "subs": [ {
@@ -15,7 +14,6 @@
         ]
     },
     {
-        "name": "Asymptonic Notation",
         "id": "asymptonicNotationChapter",
         "defaultId": "asymptonicNotation",
         "subs":[
@@ -26,7 +24,6 @@
         ]
     },
     {
-        "name": "Array",
         "id": "arraysChapter",
         "defaultId": "array",
         "subs":[
@@ -37,7 +34,6 @@
         ]
     },
     {
-        "name": "List Structure",
         "id": "listStructureChapter",
         "defaultId": "listStructure",
         "subs":[
@@ -48,11 +44,14 @@
             {
                 "name": "Iterator",
                 "id": "iterator"
+            },
+            {
+                "name": "Singly Linked List",
+                "id": "singlyLinkedList"
             }
         ]
     },
     {
-        "name": "Stack & Queue",
         "id": "stackAndQueueChapter",
         "defaultId": "stackAndQueue",
         "subs":[
@@ -63,7 +62,6 @@
         ]
     },
     {
-        "name": "Tree",
         "id": "treeChapter",
         "defaultId": "tree",
         "subs":[
@@ -74,7 +72,6 @@
         ]
     },
     {
-        "name": "Heap",
         "id": "heapChapter",
         "defaultId": "heap",
         "subs":[
@@ -85,7 +82,6 @@
         ]
     },
     {
-        "name": "Graph",
         "id": "graphChapter",
         "defaultId": "graph",
         "subs":[
@@ -96,7 +92,6 @@
         ]
     },
     {
-        "name": "Hash Table",
         "id": "hashChapter",
         "defaultId": "hash",
         "subs":[
