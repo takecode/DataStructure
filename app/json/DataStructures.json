@@ -44,14 +44,7 @@
             {
                 "name": "List Structure",
                 "id": "listStructure"
-            }
-        ]
-    },
-    {
-        "name": "Iterator",
-        "id": "iteratorChapter",
-        "defaultId": "iterator",
-        "subs":[
+            },
             {
                 "name": "Iterator",
                 "id": "iterator"
@@ -109,7 +102,7 @@
         "subs":[
             {
                 "name": "Hash Table",
-                "id": "hash"
+                "id": "graph"
             }
         ]
     }

@@ -12,8 +12,8 @@
                 "list":[
                     "Constructor( Element value, Node nextNode ): Create a new node, with value as its contained value and next as the value of the next pointer",
                     "Node getNext(): Returns the value of node's next pointer",
-                    "Element getValue(): Returns the value contained in node n",
-                    "setValue( Element value ): Sets the contained value to be value",
+                    "var getValue(): Returns the value contained in node n",
+                    "setValue( var value ): Sets the contained value to be value",
                     "setNext( Node nextNode ): Sets the value of node's next pointer to be nextNode"
                 ]
             }
@@ -27,7 +27,7 @@
                 "description": "Building a Chain From Nodes."
             },
             {
-                "title": "Chain",
+                "title": "Chain Class",
                 "description": "Class Of Chain",
                 "list":[
                     "Constructuctor(): Create a new chain",
@@ -69,6 +69,22 @@
             {
                 "title": "List Structures",
                 "description": "List structures built from either nodes or arrays"
+            },
+            {
+                "title": "List Class",
+                "description": "List Abstract Data Type (ADT)",
+                "list":[
+                    "Iterator getBegin(): Returns the list iterator (we'll define this soon) that represents the first element of the list. Runs in O(1) time.",
+                    "Iterator getEnd(): Returns the list iterator that represents one element past the last element in the list. Runs in O(1) time.",
+                    "prepend( var value ): Adds a new element at the beginning of a list. Runs in O(1) time.",
+                    "insertAfter( Iterator iterator, var value ): Adds a new element immediately after iter. Runs in O(N) time.",
+                    "removeFirst(): Removes the element at the beginning of a list. Runs in O(1) time.",
+                    "removeAfter( Iterator iterator ): Removes the element immediately after iter. Runs in O(N) time.",
+                    "boolean isEmpty(): True if there are no elements in the list. Has a default implementation. Runs in O(1) time.",
+                    "var getSize(): Returns the number of elements in the list. Has a default implementation. Runs in O(N) time.",
+                    "var getAt( var index ): Returns the nth element in the list, counting from 0. Has a default implementation. Runs in O(N) time.",
+                    "setAt( var index, var value ): Assigns a new value to the nth element in the list, counting from 0. Has a default implementation. Runs in O(N) time."
+                ]
             }
         ]
     },
@@ -78,6 +94,16 @@
             {
                 "title": "Iterator",
                 "description": "Iterators as an abstract model of enumerating the items in a sequence"
+            },
+            {
+                "title": "Iterator Class",
+                "description": "The iterator is another abstraction that encapsulates both access to a single element and incremental movement around the list. Its interface is very similar to the node interface presented in the introduction, but since it is an abstract type, different lists can implement it differently.",
+                "list":[
+                    "var getValue(): Returns the value of the list element that this iterator refers to.",
+                    "setValue( var value ): Assigns a new value to the list element that this iterator refers to.",
+                    "moveNext(): Makes this iterator refer to the next element in the list.",
+                    "boolean isEqual( Iterator iterator ): True if the other iterator refers to the same list element as this iterator."
+                ]
             }
         ]
     },
