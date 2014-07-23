@@ -67,9 +67,10 @@ function( $scope, $stateParams, StateService, DefinitionFactory ){
     $scope.initialize = function(){
         $scope.definitionList = DefinitionFactory.list;
         for( var count in $scope.definitionList ){
-            var definition = $scope.definitionList[count];
-            if( definition.id === $stateParams.subChapterId ){
-                $scope.definitions = definition.definitions;
+            var chapter = $scope.definitionList[count];
+            if( chapter.id === $stateParams.subChapterId ){
+                $scope.chapter = chapter;
+                $scope.definitions = chapter.definitions;
             }
         }
     };

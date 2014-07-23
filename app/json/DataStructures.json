@@ -41,15 +41,33 @@
         "subs":[
             {
                 "name": "List Structure",
-                "id": "listStructure"
+                "id": "listStructure",
+                "hasCode": true
             },
             {
                 "name": "Iterator",
-                "id": "iterator"
+                "id": "iterator",
+                "hasCode": true
             },
             {
                 "name": "Singly Linked List",
                 "id": "singlyLinkedList"
+            },
+            {
+                "name": "Vector",
+                "id": "vector"
+            },
+            {
+                "name": "Bidirectional List",
+                "id": "bidirectionalList"
+            },
+            {
+                "name": "Doubly Linked List",
+                "id": "doublyLinkedList"
+            },
+            {
+                "name": "Advantages / Disadvantages",
+                "id": "listAdvantagesAndDisadvantages"
             }
         ]
     },

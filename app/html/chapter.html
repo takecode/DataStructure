@@ -1,8 +1,7 @@
 <span ng-repeat="sub in subs">
     <span ng-hide="$first && $last">
         <a ng-class="getClass(sub.id)" ui-sref="chapter.sub({ subChapterId: sub.id })">
-            {{sub.name}}
-            <span ng-show="sub.hasCode">&#9733;</span>
+            {{sub.name}}<span ng-show="sub.hasCode">&#9733;</span>
         </a>
         <span ng-show="!$last"> - </span>
     </span>

@@ -3,7 +3,7 @@
     <dl>
         <dt>{{definition.title}}</dt>
         <dd>
-            {{definition.description}}
+            <span ng-show="definition.description">{{definition.description}}</span>
             <ul>
                 <li ng-repeat="message in definition.list">
                     {{message}}
@@ -12,3 +12,6 @@
         </dd>
     </dl>
 </span>
+<p ng-show="chapter.reference">
+    <b>Reference:</b> <a href="{{chapter.reference}}">{{chapter.reference}}</a>
+</p>

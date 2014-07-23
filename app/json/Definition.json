@@ -1,6 +1,7 @@
 [
     {
         "id": "node",
+        "reference": "http://en.m.wikibooks.org/wiki/Data_Structures/Introduction#The_Node",
         "definitions": [
             {
                 "title": "Definition",
@@ -21,6 +22,7 @@
     },
     {
         "id": "chain",
+        "reference": "http://en.m.wikibooks.org/wiki/Data_Structures/Introduction#Building_a_Chain_from_Nodes",
         "definitions":[
             {
                 "title": "Definition",
@@ -40,6 +42,7 @@
     },
     {
         "id": "asymptonicNotation",
+        "reference": "http://en.m.wikibooks.org/wiki/Data_Structures/Asymptotic_Notation#Introduction",
         "definitions":[
             {
                 "title": "Asymptonic Notation",
@@ -56,6 +59,7 @@
     },
     {
         "id": "array",
+        "reference": "http://en.m.wikibooks.org/wiki/Data_Structures/Arrays#Arrays",
         "definitions":[
             {
                 "title": "Array",
@@ -65,6 +69,7 @@
     },
     {
         "id": "listStructure",
+        "reference": "http://en.m.wikibooks.org/wiki/Data_Structures/List_Structures#List_Structures_and_Iterators",
         "definitions":[
             {
                 "title": "List Structures",
@@ -90,6 +95,7 @@
     },
     {
         "id": "iterator",
+        "reference": "http://en.m.wikibooks.org/wiki/Data_Structures/List_Structures#List_Structures_and_Iterators",
         "definitions":[
             {
                 "title": "Iterator",
@@ -109,10 +115,69 @@
     },
     {
         "id": "singlyLinkedList",
+        "reference": "http://en.m.wikibooks.org/wiki/Data_Structures/List_Structures#Singly_Linked_List",
         "definitions":[
             {
                 "title": "Singly Linked List",
                 "description": "Singly Linked List"
+            }
+        ]
+    },
+    {
+        "id": "vector",
+        "reference": "http://en.m.wikibooks.org/wiki/Data_Structures/List_Structures#Vector",
+        "definitions":[
+            {
+                "title": "Vector",
+                "description": "Vector"
+            }
+        ]
+    },
+    {
+        "id": "bidirectionalList",
+        "reference": "http://en.m.wikibooks.org/wiki/Data_Structures/List_Structures#Bidirectional_Lists",
+        "definitions":[
+            {
+                "title": "Bidirectional List",
+                "description": "Bidirectional List"
+            }
+        ]
+    },
+    {
+        "id": "doublyLinkedList",
+        "reference": "http://en.m.wikibooks.org/wiki/Data_Structures/List_Structures#Doubly_Linked_List_Implementation",
+        "definitions":[
+            {
+                "title": "Doubly Linked List",
+                "description": "Doubly Linked List"
+            }
+        ]
+    },
+    {
+        "id": "listAdvantagesAndDisadvantages",
+        "reference": "http://en.m.wikibooks.org/wiki/Data_Structures/List_Structures#Advantages_.2F_Disadvantages",
+        "definitions":[
+            {
+                "title": "Advantages / Disadvantages",
+                "description": "For the most part, an advantage of an array is a disadvantage of a linked-list, and vice versa."
+            },
+            {
+                "title": "Array Advantages (vs. Link-Lists)",
+                "list":[
+                    "Index - Fast access to every element in the array using an index [], not so with linked list where elements in beginning must be traversed to your desired element.",
+                    "Faster - In general, It is faster to access an element in an array than accessing an element in a linked-list."
+                ]
+            },
+            {
+                "title": "Link-Lists Advantages (vs. Arrays)",
+                "list":[
+                    "Resize - Can easily resize the link-list by adding elements without affecting the majority of the other elements in the link-list.",
+                    "Insertion - Can easily insert an element in the middle of a linked-list, (the element is created and then you code pointers to link this element to the other element(s) in the link-list)."
+                ]
+            },
+            {
+                "title": "Side Note - How to insert an element in the middle of an array.",
+                "description": "If an array is not full, you take all the elements after the spot or index in the array you want to insert, and move them forward by 1, then insert your element. If the array is already full and you want to insert an element, you would have to, in a sense, 'resize the array.' A new array would have to be made one size larger than the original array to insert your element, then all the elements of the original array are copied to the new array taking into consideration the spot or index to insert your element, then insert your element."
             }
         ]
     },
