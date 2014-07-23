@@ -60,8 +60,8 @@ function( $scope, $location, $state, $stateParams, DataStructureFactory, UrlServ
 
 }]);
 
-// Sub Chapter Controller
-dataStructureApp.controller( 'SubChapterController',
+// Definition Controller
+dataStructureApp.controller( 'DefinitionController',
 ['$scope', '$stateParams', 'StateService', 'DefinitionFactory',
 function( $scope, $stateParams, StateService, DefinitionFactory ){
     $scope.initialize = function(){

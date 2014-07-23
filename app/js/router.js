@@ -52,25 +52,10 @@ dataStructureApp.config(function($stateProvider, $urlRouterProvider) {
             templateUrl: 'html/chapter.html',
             controller: 'ChapterController'
         })
-        .state( 'chapter.sub', {
-            url: '/subChapter/:subChapterId',
-            templateUrl: 'html/subChapter.html',
-            controller: 'SubChapterController'
-        })
-        // Node Views ==========
-        .state('node', {
-            url: '/node',
-            templateUrl: 'html/node/node.html',
-            controller: 'NodeController'
-        })
-        .state('node.node', {
-            url: '/node',
-            templateUrl: 'html/node/nodeOfNode.html'
-        })
-        .state('node.chain', {
-            url: '/chain',
-            templateUrl: 'html/node/chainOfNode.html',
-            controller: 'ChainController'
+        .state( 'chapter.definition', {
+            url: '/definition/:subChapterId',
+            templateUrl: 'html/definition.html',
+            controller: 'DefinitionController'
         })
         ;
     });

@@ -5,7 +5,7 @@
     <li ng-repeat="dataStructure in dataStructures">
         <p>
         <span ng-repeat="sub in dataStructure.subs">
-            <a ui-sref="chapter.sub({ chapterId: dataStructure.id, subChapterId: sub.id })">
+            <a ui-sref="chapter.definition({ chapterId: dataStructure.id, subChapterId: sub.id })">
                 {{sub.name}}<span ng-show="sub.hasCode">&#9733;</span>
             </a>
             <span ng-show="$first && !$last"> [ </span>
