@@ -1,13 +1,13 @@
 {
-  "name": "SampleTree",
+  "name": "DataStructure",
   "version": "0.1.0",
-  "description": "binary tree sample",
+  "description": "Learning Data Structure",
   "scripts": {
     "test": "grunt test"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/takecode/SampleTree"
+    "url": "https://github.com/takecode/DataStructure"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
@@ -27,7 +27,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/takecode/SampleTree/issues"
+    "url": "https://github.com/takecode/DataStructure/issues"
   },
-  "homepage": "https://github.com/takecode/SampleTree"
+  "homepage": "https://github.com/takecode/DataStructure"
 }

@@ -1,12 +1,12 @@
 {
-  "name": "SampleTree",
+  "name": "DataStructure",
   "version": "0.1.0",
-  "homepage": "https://github.com/takecode/SampleTree",
+  "homepage": "https://github.com/takecode/DataStructure",
   "authors": [
     "Yeongmin Cha <agyomany@gmail.com>",
     "Jaewe Heo <jaeweheo@gmail.com>"
   ],
-  "description": "binary tree sample",
+  "description": "Learning Data Structure",
   "moduleType": [
     "node"
   ],
