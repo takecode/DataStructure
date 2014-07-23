@@ -49,12 +49,12 @@ dataStructureApp.config(function($stateProvider, $urlRouterProvider) {
         })
         .state( 'chapter', {
             url: '/chapter/:chapterId',
-            templateUrl: 'html/chapter.html',
+            templateUrl: 'html/chapterTemplate.html',
             controller: 'ChapterController'
         })
         .state( 'chapter.definition', {
             url: '/definition/:subChapterId',
-            templateUrl: 'html/definition.html',
+            templateUrl: 'html/definitionTemplate.html',
             controller: 'DefinitionController'
         })
         ;
