@@ -9,14 +9,16 @@ dataStructureApp.service( 'StateService', function(){
     this.getFirstState = function( state ){
         var stateList = state.split( '.' );
         return stateList[0];
-    }
+    };
 });
 
 dataStructureApp.service( 'UrlService', function(){
     this.getLastWord = function( url ){
         var wordList = this.getWordList( url );
 
-        if( wordList === null ) return '';
+        if( wordList === null ){
+            return '';
+        }
 
         return wordList[wordList.length - 1];
     };
@@ -24,13 +26,17 @@ dataStructureApp.service( 'UrlService', function(){
     this.getBeforeTheLastWord = function( url ){
         var wordList = this.getWordList( url );
 
-        if( wordList === null || wordList.length < 2 ) return '';
+        if( wordList === null || wordList.length < 2 ){
+            return '';
+        }
 
         return wordList[wordList.length - 2];
     };
 
     this.getWordList = function( url ){
-        if( url === null || url === undefined ) return null;
+        if( url === null || url === undefined ){
+            return null;
+        }
 
         return url.split( '/' );
     };
