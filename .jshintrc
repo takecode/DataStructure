@@ -25,6 +25,8 @@
     "it": true,
     "expect": true,
     "beforeEach": true,
-    "afterEach": true
+    "afterEach": true,
+    "Chaking": true,
+    "Importre": true
   }
 }

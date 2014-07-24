@@ -17,4 +17,4 @@ Chaking.Node = function( value, nextNode ){
     this.setValue = function( value ){
         this.value = value;
     };
-}
+};

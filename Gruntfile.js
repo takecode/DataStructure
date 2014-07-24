@@ -34,9 +34,10 @@ module.exports = function (grunt) {
         },
         jshint: {
             options: {
+                '-W034': true,
                 jshintrc: '.jshintrc'
             },
-            all: [
+            all:[
             'Gruntfile.js',
             'karma.conf.js',
             'app/js/**/*.js',
