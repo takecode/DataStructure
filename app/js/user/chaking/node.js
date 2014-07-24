@@ -1,7 +1,20 @@
 'use strict';
 
-var haha = function(){
-    console.log( 'haha' );
-};
+var Chaking = Chaking || {};
 
-haha();
+Chaking.Node = function( value, nextNode ){
+    this.nextNode = nextNode;
+    this.value = value;
+    this.getNext = function(){
+        return this.nextNode;
+    };
+    this.getValue = function(){
+        return this.value;
+    };
+    this.setNext = function( nextNode ){
+        this.nextNode = nextNode;
+    };
+    this.setValue = function( value ){
+        this.value = value;
+    };
+}

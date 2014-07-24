@@ -1,8 +1,8 @@
 'use strict';
 
-var Chaking = Chaking || {};
+var Importre = Importre || {};
 
-Chaking.Node = function( value, nextNode ){
+Importre.Node = function( value, nextNode ){
     this.nextNode = nextNode;
     this.value = value;
     this.getNext = function(){

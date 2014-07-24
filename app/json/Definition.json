@@ -11,7 +11,7 @@
                 "title": "Node Class",
                 "description": "A node is simply a container for a value, plus a pointer to a \"next\" node (which may be null).",
                 "list":[
-                    "Constructor( Element value, Node nextNode ): Create a new node, with value as its contained value and next as the value of the next pointer",
+                    "Constructor( var value, Node nextNode ): Create a new node, with value as its contained value and next as the value of the next pointer",
                     "Node getNext(): Returns the value of node's next pointer",
                     "var getValue(): Returns the value contained in node n",
                     "setValue( var value ): Sets the contained value to be value",

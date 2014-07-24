@@ -73,7 +73,21 @@ function( $scope, $stateParams, StateService, DefinitionFactory ){
                 $scope.definitions = chapter.definitions;
             }
         }
+
+        $scope.test();
     };
+
+    $scope.test = function(){
+        var Node = Chaking.Node;
+        var Node2 = Importre.Node;
+        var node = new Node( 3, null );
+        var node2 = new Node( 4, node );
+        console.log( node2.getNext().getValue() );
+
+        var node = new Node2( 5, null );
+        var node2 = new Node2( 6, node );
+        console.log( node2.getNext().getValue() );
+    }
 
     $scope.initialize();
 }]);
