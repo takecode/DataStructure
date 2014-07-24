@@ -2,80 +2,101 @@
 
 module.exports = function (grunt) {
 
-  require('load-grunt-tasks')(grunt);
+    require('load-grunt-tasks')(grunt);
 
-  // Project configuration.
-  grunt.initConfig({
-    watch: {
-      scripts: {
-        options: {
-          livereload: true
+    // Project configuration.
+    grunt.initConfig({
+        watch: {
+            scripts: {
+                options: {
+                    livereload: true
+                },
+                files: [
+                'app/js/**/*.js',
+                'app/html/**/*.html',
+                'app/css/**/*.css'
+                ]
+            },
+            userScripts:{
+                options:{
+                    livereload: true
+                },
+                files: [
+                    'app/js/user/**/*.js'
+                ],
+                tasks: ['concat']
+            },
+            karma: {
+                files: ['app/js/**/*.js', 'test/**/*.js'],
+                tasks: ['karma:unit:run']
+            }
         },
-        files: [
-          'app/js/**/*.js',
-          'app/html/**/*.html',
-          'app/css/**/*.css'
-        ]
-      },
-      karma: {
-        files: ['app/js/**/*.js', 'test/**/*.js'],
-        tasks: ['karma:unit:run']
-      }
-    },
-    jshint: {
-      options: {
-        jshintrc: '.jshintrc'
-      },
-      all: [
-        'Gruntfile.js',
-        'karma.conf.js',
-        'app/js/**/*.js',
-        'test/**/*.js'
-      ]
-    },
-    connect: {
-      server: {
-        options: {
-          port: 8888,
-          hostname: '*',
-          base: './app/'
+        jshint: {
+            options: {
+                jshintrc: '.jshintrc'
+            },
+            all: [
+            'Gruntfile.js',
+            'karma.conf.js',
+            'app/js/**/*.js',
+            'test/**/*.js'
+            ]
+        },
+        connect: {
+            server: {
+                options: {
+                    port: 8888,
+                    hostname: '*',
+                    base: './app/'
+                }
+            }
+        },
+        karma: {
+            unit: {
+                configFile: 'karma.conf.js',
+                singleRun: true,
+                browsers: ['Chrome', 'PhantomJS']
+            }
+        },
+        copy: {
+            main: {
+                files: [
+                {src: ['app/css/**'], dest: 'dist/'},
+                {src: ['app/js/**'], dest: 'dist/'},
+                {src: ['app/html/**'], dest: 'dist/'},
+                {src: ['app/index.html'], dest: 'dist/'},
+                {src: ['app/bower_components/bootstrap/dist/css/bootstrap.min.css'], dest: 'dist/'},
+                {src: ['app/bower_components/angular/angular.min.js'], dest: 'dist/'}
+                ]
+            }
+        },
+        concat:{
+            disk:{
+                src:[
+                    'app/js/user/**/*.js'
+                ],
+                dest: 'app/js/user.js'
+            }
         }
-      }
-    },
-    karma: {
-      unit: {
-        configFile: 'karma.conf.js',
-        singleRun: true,
-        browsers: ['PhantomJS']
-      }
-    },
-    copy: {
-      main: {
-        files: [
-          {src: ['app/css/**'], dest: 'dist/'},
-          {src: ['app/js/**'], dest: 'dist/'},
-          {src: ['app/html/**'], dest: 'dist/'},
-          {src: ['app/index.html'], dest: 'dist/'},
-          {src: ['app/bower_components/bootstrap/dist/css/bootstrap.min.css'], dest: 'dist/'},
-          {src: ['app/bower_components/angular/angular.min.js'], dest: 'dist/'}
-        ]
-      }
-    }
-  });
+    });
 
-  grunt.registerTask('default', [
+    grunt.registerTask('default', [
     'jshint',
     'connect',
+    'concat',
     'watch'
-  ]);
+    ]);
 
-  grunt.registerTask('test', [
+    grunt.registerTask('test', [
     'jshint',
     'karma'
-  ]);
+    ]);
 
-  grunt.registerTask('dist', [
+    grunt.registerTask('dist', [
     'jshint',
     'copy'
-  ]);
+    ]);
+
+    grunt.loadNpmTasks( 'grunt-contrib-watch' );
+    grunt.loadNpmTasks( 'grunt-contrib-concat' );
 };

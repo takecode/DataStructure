@@ -2,6 +2,7 @@
  * Created by YeongminCha on 14. 6. 17.
  */
 
+
 'use strict';
 
 var dataStructureApp = angular.module('DataStructureApp.Router', ['ui.router']);
