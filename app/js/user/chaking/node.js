@@ -1,6 +1,7 @@
 'use strict';
 
-function Node(){
+var haha = function(){
     console.log( 'haha' );
-    return 'haha';
-}
+};
+
+haha();
