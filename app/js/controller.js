@@ -78,13 +78,29 @@ function( $scope, $stateParams, StateService, DefinitionFactory ){
     };
 
     $scope.test = function(){
+        var Chain = Chaking.Chain;
         var Node = Chaking.Node;
-        var node = new Node( 3, null );
+
+        var node = new Node( 3 );
+        var node2 = new Node( 4 );
+        var chain = new Chain();
+        chain.put( node );
+        chain.put( node2 );
+        console.log( chain.getFirstNode().getValue() );
+        console.log( chain.getFirstNode().getNext().getValue() );
+        chain.removeNode( node2 );
+        console.log( chain.getFirstNode().getValue() );
+        console.log( chain.getFirstNode().getNext().getValue() );
+    };
+
+    $scope.testUser = function(){
+        var Node = Chaking.Node;
+        var node = new Node( 3 );
         var node2 = new Node( 4, node );
         console.log( node2.getNext().getValue() );
 
         Node = Importre.Node;
-        node = new Node( 5, null );
+        node = new Node( 5 );
         node2 = new Node( 6, node );
         console.log( node2.getNext().getValue() );
     };

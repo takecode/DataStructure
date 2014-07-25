@@ -29,7 +29,7 @@ module.exports = function (grunt) {
             },
             karma: {
                 files: ['app/js/**/*.js', 'test/**/*.js'],
-                tasks: ['karma:unit:run']
+                tasks: ['karma:unit']
             }
         },
         jshint: {
@@ -57,7 +57,7 @@ module.exports = function (grunt) {
             unit: {
                 configFile: 'karma.conf.js',
                 singleRun: true,
-                browsers: ['Chrome', 'PhantomJS']
+                browsers: ['PhantomJS']
             }
         },
         copy: {

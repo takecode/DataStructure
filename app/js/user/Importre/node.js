@@ -1,8 +1,8 @@
-'use strict';
-
 var Importre = Importre || {};
 
 Importre.Node = function( value, nextNode ){
+    'use strict';
+
     this.nextNode = nextNode;
     this.value = value;
     this.getNext = function(){

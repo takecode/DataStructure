@@ -1,10 +1,16 @@
-'use strict';
-
 var Chaking = Chaking || {};
 
 Chaking.Node = function( value, nextNode ){
-    this.nextNode = nextNode;
+    'use strict';
+
     this.value = value;
+    if( typeof nextNode !== 'undefined' ){
+        this.nextNode = nextNode;
+    }
+    else{
+        this.nextNode = null;
+    }
+    
     this.getNext = function(){
         return this.nextNode;
     };
