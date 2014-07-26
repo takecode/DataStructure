@@ -90,7 +90,7 @@ function( $scope, $stateParams, StateService, DefinitionFactory ){
         console.log( chain.getFirstNode().getNext().getValue() );
         chain.removeNode( node2 );
         console.log( chain.getFirstNode().getValue() );
-        console.log( chain.getFirstNode().getNext().getValue() );
+        //console.log( chain.getFirstNode().getNext().getValue() );
     };
 
     $scope.testUser = function(){
