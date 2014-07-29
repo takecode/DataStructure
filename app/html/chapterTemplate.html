@@ -9,8 +9,8 @@ Chapter List: [
 </span>
 ]
 <p>
-<a ui-sref="chapter.definition({ subChapterId: subChapterId })">Definition</a>
-<a ui-sref="chapter.source({ subChapterId: subChapterId })">Source</a>
+<a ng-class="{bold: flagDefinition}" ui-sref="chapter.definition({ subChapterId: subChapterId })">Definition</a>
+<a ng-class="{bold: flagSource}" ui-sref="chapter.source({ subChapterId: subChapterId })">Source</a>
 </p>
 
 <div ui-view></div>

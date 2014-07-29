@@ -55,6 +55,17 @@ function( $scope, $location, $stateParams, UrlService ){
         }
     });
 
+    $scope.$watch( 'content', function(){
+        $scope.flagDefinition = false;
+        $scope.flagSource = false;
+        if( $scope.content === 'definition' ){
+            $scope.flagDefinition = true;
+        }
+        else if( $scope.content === 'source' ){
+            $scope.flagSource = true;
+        }
+    });
+
     $scope.getClass = function( theId ) {
         var path = $location.path();
         var id = UrlService.getLastWord( path );
@@ -77,36 +88,9 @@ dataStructureApp.controller( 'DefinitionController',
 function( $scope, $stateParams ){
     $scope.initialize = function(){
         $scope.$parent.subChapterId = $stateParams.subChapterId;
+        $scope.$parent.content = 'definition';
 
-        //$scope.test();
-    };
-
-    $scope.test = function(){
-        var Chain = Chaking.Chain;
-        var Node = Chaking.Node;
-
-        var node = new Node( 3 );
-        var node2 = new Node( 4 );
-        var chain = new Chain();
-        chain.put( node );
-        chain.put( node2 );
-        console.log( chain.getFirstNode().getValue() );
-        console.log( chain.getFirstNode().getNext().getValue() );
-        chain.removeNode( node2 );
-        console.log( chain.getFirstNode().getValue() );
-        //console.log( chain.getFirstNode().getNext().getValue() );
-    };
-
-    $scope.testUser = function(){
-        var Node = Chaking.Node;
-        var node = new Node( 3 );
-        var node2 = new Node( 4, node );
-        console.log( node2.getNext().getValue() );
-
-        Node = Importre.Node;
-        node = new Node( 5 );
-        node2 = new Node( 6, node );
-        console.log( node2.getNext().getValue() );
+        //testUser();
     };
 
     $scope.initialize();
@@ -114,17 +98,27 @@ function( $scope, $stateParams ){
 
 // Source Controller
 dataStructureApp.controller( 'SourceController',
-['$scope', '$http', '$stateParams',
-function( $scope, $http, $stateParams ){
+['$scope', '$http', '$state', '$stateParams',
+function( $scope, $http, $state, $stateParams ){
     $scope.initialize = function(){
         $scope.$parent.subChapterId = $stateParams.subChapterId;
+        $scope.$parent.content = 'source';
+        //var name = '*.source';
+        //console.log( $state.includes( name ) );
 
-        $scope.sourceText = 'Source Text';
+        var url = 'js/user/' + $scope.user.id + '/' + $scope.subChapterId + '.js';
 
-        $http.get('js/user/chaking/chain.js').success(function(data) {
+        $http.get(url).success(function(data) {
             $scope.sourceText = data;
+        })
+        .error( function( data ){
+            $scope.sourceText = 'Not yet.'
         });
     };
+
+    $scope.$watch( 'user', function(){
+        $scope.initialize();
+    });
 
     $scope.initialize();
 }]);

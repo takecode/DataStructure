@@ -10,7 +10,7 @@ Chaking.Node = function( value, nextNode ){
     else{
         this.nextNode = null;
     }
-    
+
     this.getNext = function(){
         return this.nextNode;
     };

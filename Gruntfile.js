@@ -77,7 +77,7 @@ module.exports = function (grunt) {
                 src:[
                     'app/js/user/**/*.js'
                 ],
-                dest: 'app/js/user.js'
+                dest: 'app/js/userSource.js'
             }
         }
     });
