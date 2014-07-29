@@ -14,8 +14,6 @@ $ npm install -g grunt-cli
 $ npm install -g bower
 $ npm install
 $ bower install
-$ bower install angular-ui-router
-$ bower install angular-resource
 ```
 
 
