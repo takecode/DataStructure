@@ -1,3 +1,5 @@
+'use strict';
+
 var testChain = function(){
     var Chain = Chaking.Chain;
     var Node = Chaking.Node;

@@ -27,8 +27,7 @@ dataStructureApp.controller( 'IndexController',
  }]);
 
 // Home Controller
-dataStructureApp.controller( 'HomeController', ['$scope',
-function( $scope ){
+dataStructureApp.controller( 'HomeController', [function(){
 }]);
 
 // Chapter Controller
@@ -111,8 +110,8 @@ function( $scope, $http, $state, $stateParams ){
         $http.get(url).success(function(data) {
             $scope.sourceText = data;
         })
-        .error( function( data ){
-            $scope.sourceText = 'Not yet.'
+        .error( function(){
+            $scope.sourceText = 'Not yet.';
         });
     };
 
