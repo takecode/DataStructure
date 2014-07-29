@@ -16,26 +16,26 @@ dataStructureApp.controller( 'IndexController',
 
      $http.get('json/DataStructures.json').success(function(data) {
          DataStructureFactory.list = data;
+         $scope.dataStructures = DataStructureFactory.list;
      });
 
      $http.get('json/Definition.json').success(function(data) {
          DefinitionFactory.list = data;
+         $scope.definitionList = DefinitionFactory.list;
      });
 
  }]);
 
 // Home Controller
-dataStructureApp.controller( 'HomeController', ['$scope', 'DataStructureFactory',
- function( $scope, DataStructureFactory ){
-    $scope.dataStructures = DataStructureFactory.list;
+dataStructureApp.controller( 'HomeController', ['$scope',
+function( $scope ){
 }]);
 
 // Chapter Controller
 dataStructureApp.controller( 'ChapterController',
-['$scope', '$location', '$state', '$stateParams', 'DataStructureFactory', 'UrlService',
-function( $scope, $location, $state, $stateParams, DataStructureFactory, UrlService ){
+['$scope', '$location', '$stateParams', 'UrlService',
+function( $scope, $location, $stateParams, UrlService ){
     $scope.initialize = function(){
-        $scope.dataStructures = DataStructureFactory.list;
         for( var count in $scope.dataStructures ){
             var dataStructure = $scope.dataStructures[count];
             if( dataStructure.id === $stateParams.chapterId ){
@@ -44,6 +44,16 @@ function( $scope, $location, $state, $stateParams, DataStructureFactory, UrlServ
             }
         }
     };
+
+    $scope.$watch( 'subChapterId', function(){
+        for( var count in $scope.definitionList ){
+            var chapter = $scope.definitionList[count];
+            if( chapter.id === $scope.subChapterId ){
+                $scope.chapter = chapter;
+                $scope.definitions = chapter.definitions;
+            }
+        }
+    });
 
     $scope.getClass = function( theId ) {
         var path = $location.path();
@@ -63,18 +73,10 @@ function( $scope, $location, $state, $stateParams, DataStructureFactory, UrlServ
 
 // Definition Controller
 dataStructureApp.controller( 'DefinitionController',
-['$scope', '$stateParams', 'StateService', 'DefinitionFactory',
-function( $scope, $stateParams, StateService, DefinitionFactory ){
+['$scope', '$stateParams',
+function( $scope, $stateParams ){
     $scope.initialize = function(){
-        $scope.definitionList = DefinitionFactory.list;
         $scope.$parent.subChapterId = $stateParams.subChapterId;
-        for( var count in $scope.definitionList ){
-            var chapter = $scope.definitionList[count];
-            if( chapter.id === $stateParams.subChapterId ){
-                $scope.chapter = chapter;
-                $scope.definitions = chapter.definitions;
-            }
-        }
 
         //$scope.test();
     };
@@ -112,19 +114,18 @@ function( $scope, $stateParams, StateService, DefinitionFactory ){
 
 // Source Controller
 dataStructureApp.controller( 'SourceController',
-['$scope', '$stateParams', 'DefinitionFactory',
-function( $scope, $stateParams, DefinitionFactory ){
+['$scope', '$http', '$stateParams',
+function( $scope, $http, $stateParams ){
     $scope.initialize = function(){
-        $scope.sourceText = 'Source Text';
-        $scope.definitionList = DefinitionFactory.list;
-        for( var count in $scope.definitionList ){
-            var chapter = $scope.definitionList[count];
-            if( chapter.id === $stateParams.subChapterId ){
-                $scope.chapter = chapter;
-            }
-        }
+        $scope.$parent.subChapterId = $stateParams.subChapterId;
 
+        $scope.sourceText = 'Source Text';
+
+        $http.get('js/user/chaking/chain.js').success(function(data) {
+            $scope.sourceText = data;
+        });
     };
+
     $scope.initialize();
 }]);
 
