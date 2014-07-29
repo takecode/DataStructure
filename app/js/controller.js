@@ -88,8 +88,6 @@ function( $scope, $stateParams ){
     $scope.initialize = function(){
         $scope.$parent.subChapterId = $stateParams.subChapterId;
         $scope.$parent.content = 'definition';
-
-        //testUser();
     };
 
     $scope.initialize();
@@ -102,8 +100,6 @@ function( $scope, $http, $state, $stateParams ){
     $scope.initialize = function(){
         $scope.$parent.subChapterId = $stateParams.subChapterId;
         $scope.$parent.content = 'source';
-        //var name = '*.source';
-        //console.log( $state.includes( name ) );
 
         var url = 'js/user/' + $scope.user.id + '/' + $scope.subChapterId + '.js';
 
@@ -113,6 +109,8 @@ function( $scope, $http, $state, $stateParams ){
         .error( function(){
             $scope.sourceText = 'Not yet.';
         });
+
+        testIterator();
     };
 
     $scope.$watch( 'user', function(){

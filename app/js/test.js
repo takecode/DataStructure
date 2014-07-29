@@ -1,5 +1,12 @@
 'use strict';
 
+var testIterator = function(){
+    var Iterator = Chaking.Iterator;
+    var iterator = new Iterator();
+    iterator.setValue( 3 );
+    console.log( iterator.getValue() );
+}
+
 var testChain = function(){
     var Chain = Chaking.Chain;
     var Node = Chaking.Node;
