@@ -1,3 +1,4 @@
+Chapter List: [
 <span ng-repeat="sub in subs">
     <span ng-hide="$first && $last">
         <a ng-class="getClass(sub.id)" ui-sref="chapter.definition({ subChapterId: sub.id })">
@@ -6,4 +7,10 @@
         <span ng-show="!$last"> - </span>
     </span>
 </span>
+]
+<p>
+<a ui-sref="chapter.definition({ subChapterId: subChapterId })">Definition</a>
+<a ui-sref="chapter.source({ subChapterId: subChapterId })">Source</a>
+</p>
+
 <div ui-view></div>

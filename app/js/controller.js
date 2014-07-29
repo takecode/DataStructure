@@ -49,6 +49,7 @@ function( $scope, $location, $state, $stateParams, DataStructureFactory, UrlServ
         var path = $location.path();
         var id = UrlService.getLastWord( path );
 
+        //if( theId === $scope.subChapterId ){
         if( id === theId ){
             return 'btn-primary active';
         } else {
@@ -66,6 +67,7 @@ dataStructureApp.controller( 'DefinitionController',
 function( $scope, $stateParams, StateService, DefinitionFactory ){
     $scope.initialize = function(){
         $scope.definitionList = DefinitionFactory.list;
+        $scope.$parent.subChapterId = $stateParams.subChapterId;
         for( var count in $scope.definitionList ){
             var chapter = $scope.definitionList[count];
             if( chapter.id === $stateParams.subChapterId ){
@@ -74,7 +76,7 @@ function( $scope, $stateParams, StateService, DefinitionFactory ){
             }
         }
 
-        $scope.test();
+        //$scope.test();
     };
 
     $scope.test = function(){
@@ -105,6 +107,24 @@ function( $scope, $stateParams, StateService, DefinitionFactory ){
         console.log( node2.getNext().getValue() );
     };
 
+    $scope.initialize();
+}]);
+
+// Source Controller
+dataStructureApp.controller( 'SourceController',
+['$scope', '$stateParams', 'DefinitionFactory',
+function( $scope, $stateParams, DefinitionFactory ){
+    $scope.initialize = function(){
+        $scope.sourceText = 'Source Text';
+        $scope.definitionList = DefinitionFactory.list;
+        for( var count in $scope.definitionList ){
+            var chapter = $scope.definitionList[count];
+            if( chapter.id === $stateParams.subChapterId ){
+                $scope.chapter = chapter;
+            }
+        }
+
+    };
     $scope.initialize();
 }]);
 

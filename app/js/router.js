@@ -58,5 +58,10 @@ dataStructureApp.config(function($stateProvider, $urlRouterProvider) {
             templateUrl: 'html/definitionTemplate.html',
             controller: 'DefinitionController'
         })
+        .state( 'chapter.source', {
+            url: '/source/:subChapterId',
+            templateUrl: 'html/sourceTemplate.html',
+            controller: 'SourceController'
+        })
         ;
     });
