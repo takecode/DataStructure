@@ -5,7 +5,7 @@ var testIterator = function(){
     var iterator = new Iterator();
     iterator.setValue( 3 );
     console.log( iterator.getValue() );
-}
+};
 
 var testChain = function(){
     var Chain = Chaking.Chain;

@@ -110,7 +110,7 @@ function( $scope, $http, $state, $stateParams ){
             $scope.sourceText = 'Not yet.';
         });
 
-        testIterator();
+        //testIterator();
     };
 
     $scope.$watch( 'user', function(){
