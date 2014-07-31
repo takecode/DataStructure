@@ -95,8 +95,8 @@ function( $scope, $stateParams ){
 
 // Source Controller
 dataStructureApp.controller( 'SourceController',
-['$scope', '$http', '$state', '$stateParams',
-function( $scope, $http, $state, $stateParams ){
+['$scope', '$http', '$state', '$stateParams', 'TestService',
+function( $scope, $http, $state, $stateParams, TestService ){
     $scope.initialize = function(){
         $scope.$parent.subChapterId = $stateParams.subChapterId;
         $scope.$parent.content = 'source';
@@ -110,7 +110,7 @@ function( $scope, $http, $state, $stateParams ){
             $scope.sourceText = 'Not yet.';
         });
 
-        //testIterator();
+        TestService.testIterator();
     };
 
     $scope.$watch( 'user', function(){
