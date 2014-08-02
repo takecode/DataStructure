@@ -44,25 +44,109 @@ Chaking.Chain = function(){
 
 var Chaking = Chaking || {};
 
-Chaking.Iterator = function(){
+Chaking.Iterator = function( node ){
     'use strict';
 
-    this.next = null;
+    var Node = Chaking.Node;
+    if( typeof node === 'undefined' ){
+        this.node = null;
+    }
+    else{
+        this.node = node;
+    }
+
     this.getValue = function(){
-        return this.value;
+        if( this.node === null ){
+            return null;
+        }
+        else{
+            return this.node.getValue();
+        }
     };
     this.setValue = function( value ){
-        this.value = value;
+        if( this.node === null ){
+            this.node = new Node( value );
+        }
+        else{
+            this.node.setValue( value );
+        }
     };
     this.moveNext = function(){
+        if( this.node !== null ){
+            this.node = this.node.getNext();
+        }
     };
+    // TODO: Need To be tested.
     this.isEqual = function( iterator ){
-        if( this === iterator ){
+        if( this.node === iterator.getNode() ){
             return true;
         }
         else{
             return false;
         }
+    };
+    this.setNode = function( node ){
+        this.node = node;
+    };
+    this.getNode = function(){
+        return this.node;
+    };
+};
+
+var Chaking = Chaking || {};
+
+Chaking.ListStructure = function(){
+    'use strict';
+
+    var Node = Chaking.Node;
+    var Iterator = Chaking.Iterator;
+    this.firstNode = null;
+    this.getBegin = function(){
+        return new Iterator( this.firstNode );
+    };
+    this.getEnd = function(){
+    };
+    this.prepend = function( value ){
+        var node = new Node( value );
+        if( this.firstNode === null ){
+            this.firstNode = this.lastNode = node;
+        }
+        else{
+            node.setNext( this.firstNode );
+            this.firstNode = node;
+        }
+    };
+    this.insertAfter = function( iterator, value ){
+        var thatNode = iterator.getNode();
+        var node = new Node( value );
+        node.setNext( thatNode.getNext() );
+        thatNode.setNext( node );
+    };
+    this.removeFirst = function(){
+        if( this.firstNode !== null ){
+            this.firstNode = this.firstNode.getNext();
+        }
+    };
+    this.removeAfter = function( iterator ){
+        var thisNode = iterator.getNode();
+        var nextNode = thisNode.getNext();
+        if( nextNode !== null ){
+            thisNode.setNext( nextNode.getNext() );
+        }
+    };
+    this.isEmpty = function(){
+        if( this.firstNode === null ){
+            return true;
+        }
+        else{
+            return false;
+        }
+    };
+    this.getSize = function(){
+    };
+    this.getAt = function(){
+    };
+    this.setAt = function(){
     };
 };
 

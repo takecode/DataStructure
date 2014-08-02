@@ -47,7 +47,7 @@ dataStructureApp.service( 'TestService', function(){
         var Iterator = Chaking.Iterator;
         var iterator = new Iterator();
         iterator.setValue( 3 );
-        console.log( iterator.getValue() );
+        //console.log( iterator.getValue() );
     };
 
     this.testChain = function(){
