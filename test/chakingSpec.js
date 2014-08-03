@@ -59,5 +59,7 @@ describe( 'ListStructure Test', function(){
         expect( iterator.getValue() ).toBe( 4 );
         iterator.moveNext();
         expect( iterator.getValue() ).toBe( 3 );
+        listStructure.removeFirst();
+        expect( listStructure.getEnd().getValue() ).toBe( 3 );
     });
 });

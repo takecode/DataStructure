@@ -91,16 +91,6 @@
                     "var getAt( var index ): Returns the nth element in the list, counting from 0. Has a default implementation. Runs in O(N) time.",
                     "setAt( var index, var value ): Assigns a new value to the nth element in the list, counting from 0. Has a default implementation. Runs in O(N) time."
                 ]
-            }
-        ]
-    },
-    {
-        "id": "iterator",
-        "reference": "http://en.m.wikibooks.org/wiki/Data_Structures/List_Structures#List_Structures_and_Iterators",
-        "definitions":[
-            {
-                "title": "Iterator",
-                "description": "Iterators as an abstract model of enumerating the items in a sequence"
             },
             {
                 "title": "Iterator Class",

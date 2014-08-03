@@ -42,12 +42,8 @@
             {
                 "name": "List Structure",
                 "id": "listStructure",
-                "hasCode": true
-            },
-            {
-                "name": "Iterator",
-                "id": "iterator",
-                "hasCode": true
+                "hasCode": true,
+                "hasVisual": true
             },
             {
                 "name": "Singly Linked List",
