@@ -72,12 +72,68 @@
         ]
     },
     {
-        "id": "stackAndQueueChapter",
-        "defaultId": "stackAndQueue",
+        "id": "stackChapter",
+        "defaultId": "stackChapter",
         "subs":[
             {
-                "name": "Stack & Queue",
-                "id": "stackAndQueue",
+                "name": "Stack",
+                "id": "stack",
+                "hasCode": true
+            },
+            {
+                "name": "Tower Of Hanoi",
+                "id": "hanoi",
+                "hasCode": true
+            },
+            {
+                "name": "Expression evaluation and syntax parsing",
+                "id": "expression",
+                "hasCode": true
+            },
+            {
+                "name": "Conversion of an Infix expression that is fully parenthesized into a Postfix expression",
+                "id": "infix",
+                "hasCode": true
+            },
+            {
+                "name": "Rearranging railroad cars",
+                "id": "railroad",
+                "hasCode": true
+            },
+            {
+                "name": "Quicksort",
+                "id": "quicksort",
+                "hasCode": true
+            },
+            {
+                "name": "The Stock Span Problem",
+                "id": "stock",
+                "hasCode": true
+            }
+        ]
+    },
+    {
+        "id": "queueChapter",
+        "defaultId": "queue",
+        "subs":[
+            {
+                "name": "Queue",
+                "id": "queue",
+                "hasCode": true
+            },
+            {
+                "name": "Linked List Implementation",
+                "id": "linkedListQueue",
+                "hasCode": true
+            },
+            {
+                "name": "Circular Array Implementation",
+                "id": "circularQueue",
+                "hasCode": true
+            },
+            {
+                "name": "Priority Queue Implementation",
+                "id": "priorityQueue",
                 "hasCode": true
             }
         ]
@@ -89,6 +145,34 @@
             {
                 "name": "Tree",
                 "id": "tree"
+            },
+            {
+                "name": "Traversal",
+                "id": "traversal"
+            },
+            {
+                "name": "Balancing",
+                "id": "balancing"
+            },
+            {
+                "name": "Binary Search Tree",
+                "hasCode": true,
+                "id": "binaryTree"
+            },
+            {
+                "name": "Red-Black Tree",
+                "hasCode": true,
+                "id": "redBlackTree"
+            },
+            {
+                "name": "B Tree",
+                "hasCode": true,
+                "id": "bTree"
+            },
+            {
+                "name": "Treaps",
+                "hasCode": true,
+                "id": "treap"
             }
         ]
     },
@@ -97,7 +181,8 @@
         "defaultId": "heap",
         "subs":[
             {
-                "name": "Heap",
+                "name": "Min and Max Heap",
+                "hasCode": true,
                 "id": "heap"
             }
         ]
@@ -109,6 +194,28 @@
             {
                 "name": "Graph",
                 "id": "graph"
+            },
+            {
+                "name": "Directed Graph",
+                "hasCode": true,
+                "id": "directedGraph"
+            },
+            {
+                "name": "Undirected Graph",
+                "id": "undirectedGraph"
+            },
+            {
+                "name": "Weighted Graph",
+                "id": "weightedGraph"
+            },
+            {
+                "name": "Graph Representation",
+                "id": "graphRepresentation"
+            },
+            {
+                "name": "Graph Traversal",
+                "hasCode": true,
+                "id": "graphTraversal"
             }
         ]
     },
@@ -118,7 +225,8 @@
         "subs":[
             {
                 "name": "Hash Table",
-                "id": "graph"
+                "hasCode": true,
+                "id": "hash"
             }
         ]
     }

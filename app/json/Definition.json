@@ -173,47 +173,260 @@
         ]
     },
     {
-        "id": "stackAndQueue",
+        "id": "stack",
+        "reference": "http://en.m.wikibooks.org/wiki/Data_Structures/Stacks_and_Queues#Stacks",
         "definitions":[
             {
-                "title": "Stack & Queue",
-                "description": "Stacks and queues for computing with last-in/first-out and first-in/first-out orderings"
+                "title": "Stack",
+                "description": "A stack is a basic data structure that can be logically thought as linear structure represented by a real physical stack or pile, a structure where insertion and deletion of items takes place at one end called top of the stack. The basic concept can be illustrated by thinking of your data set as a stack of plates or books where you can only take the top item off the stack in order to remove things from it. This structure is used all throughout programming."
+            }
+        ]
+    },
+    {
+        "id": "hanoi",
+        "reference": "http://en.m.wikibooks.org/wiki/Data_Structures/Stacks_and_Queues#Towers_of_Hanoi",
+        "definitions":[
+            {
+                "title": "Hanoi Tower",
+                "description": "One of the most interesting applications of stacks can be found in solving a puzzle called Tower of Hanoi. According to an old Brahmin story, the existence of the universe is calculated in terms of the time taken by a number of monks, who are working all the time, to move 64 disks from one pole to another. But there are some rules about how this should be done"
+            }
+        ]
+    },
+    {
+        "id": "expression",
+        "reference": "http://en.m.wikibooks.org/wiki/Data_Structures/Stacks_and_Queues#Expression_evaluation_and_syntax_parsing",
+        "definitions":[
+            {
+                "title": "Expression evaluation and syntax parsing",
+                "description": "Calculators employing reverse Polish notation use a stack structure to hold values. Expressions can be represented in prefix, postfix or infix notations. Conversion from one form of the expression to another form may be accomplished using a stack. Many compilers use a stack for parsing the syntax of expressions, program blocks etc. before translating into low level code. Most of the programming languages are context-free languages allowing them to be parsed with stack based machines."
+            }
+        ]
+    },
+    {
+        "id": "infix",
+        "reference": "http://en.m.wikibooks.org/wiki/Data_Structures/Stacks_and_Queues#Conversion_of_an_Infix_expression_that_is_fully_parenthesized_into_a_Postfix_expression",
+        "definitions":[
+            {
+                "title": "Conversion",
+                "description": "Conversion of an Infix expression that is fully parenthesized into a Postfix expression"
+            }
+        ]
+    },
+    {
+        "id": "railroad",
+        "reference": "http://en.m.wikibooks.org/wiki/Data_Structures/Stacks_and_Queues#Rearranging_railroad_cars",
+        "definitions":[
+            {
+                "title": "Rearraning railroad cars",
+                "description": "It's a very nice application of stacks. Consider that a freight train has n railroad cars. Each to be left at different station. They're numbered 1 through n & freight train visits these stations in order n through 1. Obviously, the railroad cars are labeled by their destination.To facilitate removal of the cars from the train, we must rearrange them in ascending order of their number(i.e. 1 through n). When cars are in this order , they can be detached at each station. We rearrange cars at a shunting yard that has input track, output track & k holding tracks between input & output tracks(i.e. holding track)."
+            }
+        ]
+    },
+    {
+        "id": "quicksort",
+        "reference": "http://en.m.wikibooks.org/wiki/Data_Structures/Stacks_and_Queues#Quicksort",
+        "definitions":[
+            {
+                "title": "Quicksort",
+                "description": "Sorting means arranging a group of elements in a particular order. Be it ascending or descending, by cardinality or alphabetical order or variations thereof. The resulting ordering possibilities will only be limited by the type of the source elements."
+            }
+        ]
+    },
+    {
+        "id": "stock",
+        "reference": "http://en.m.wikibooks.org/wiki/Data_Structures/Stacks_and_Queues#The_Stock_Span_Problem",
+        "definitions":[
+            {
+                "title": "The Stock Span Problem",
+                "description": "In the stock span problem, we will solve a financial problem with the help of stacks."
+            }
+        ]
+    },
+    {
+        "id": "queue",
+        "reference": "http://en.m.wikibooks.org/wiki/Data_Structures/Stacks_and_Queues#Queues",
+        "definitions":[
+            {
+                "title": "Queues",
+                "description": "A queue is a basic data structure that is used throughout programming. You can think of it as a line in a grocery store. The first one in the line is the first one to be served.Just like a queue."
+            }
+        ]
+    },
+    {
+        "id": "linkedListQueue",
+        "reference": "http://en.m.wikibooks.org/wiki/Data_Structures/Stacks_and_Queues#Linked_List_Implementation_2",
+        "definitions":[
+            {
+                "title": "Linked List Implementation",
+                "description": "The basic linked list implementation uses a singly-linked list with a tail pointer to keep track of the back of the queue."
+            }
+        ]
+    },
+    {
+        "id": "circularQueue",
+        "reference": "http://basicdatastructures.blogspot.kr/2007/12/circular-queue-data-structure.html",
+        "definitions":[
+            {
+                "title": "Circular Array Implementation",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "id": "priorityQueue",
+        "reference": "http://en.wikipedia.org/wiki/Priority_queue",
+        "definitions":[
+            {
+                "title": "Priority Queue",
+                "description": "In computer science/data structures, a priority queue is an abstract data type which is like a regular queue or stack data structure, but where additionally each element has a \"priority\" associated with it. In a priority queue, an element with high priority is served before an element with low priority. If two elements have the same priority, they are served according to their order in the queue."
             }
         ]
     },
     {
         "id": "tree",
+        "reference": "http://en.m.wikibooks.org/wiki/Data_Structures/Trees#Trees",
         "definitions":[
             {
                 "title": "Tree",
-                "description": "Binary and general tree structures for searching or representing hierarchical relationships"
+                "description": "A tree is a non-empty set one element of which is designated the root of the tree while the remaining elements are partitioned into non-empty sets each of which is a subtree of the root."
+            }
+        ]
+    },
+    {
+        "id": "traversal",
+        "reference": "http://en.m.wikibooks.org/wiki/Data_Structures/Trees#Traversal",
+        "definitions":[
+            {
+                "title": "Traversal",
+                "description": "Many problems require we visit the nodes of a tree in a systematic way: tasks such as counting how many nodes exist or finding the maximum element. Three different methods are possible for binary trees: preorder, postorder, and in-order, which all do the same three things: recursively traverse both the left and right subtrees and visit the current node. The difference is when the algorithm visits the current node"
+            }
+        ]
+    },
+    {
+        "id": "balancing",
+        "reference": "http://en.m.wikibooks.org/wiki/Data_Structures/Trees#Balancing",
+        "definitions":[
+            {
+                "title": "Balancing",
+                "description": "When entries that are already sorted are stored in a tree, all new records will go the same route, and the tree will look more like a list (such a tree is called a degenerate tree). Therefore the tree needs balancing routines, making sure that under all branches are an equal number of records. This will keep searching in the tree at optimal speed. Specifically, if a tree with n nodes is a degenerate tree, the longest path through the tree will be n nodes; if it is a balanced tree, the longest path will be log n nodes."
+            }
+        ]
+    },
+    {
+        "id": "binaryTree",
+        "reference": "http://en.m.wikibooks.org/wiki/Data_Structures/Trees#Binary_Search_Trees",
+        "definitions":[
+            {
+                "title": "Binary Search Tree",
+                "description": "A typical binary search tree"
+            }
+        ]
+    },
+    {
+        "id": "redBalckTree",
+        "reference": "http://en.m.wikibooks.org/wiki/Data_Structures/Trees#red-black_trees",
+        "definitions":[
+            {
+                "title": "Red-Black Tree",
+                "description": "A red black tree is a self-balancing tree structure that uses a color attribute , and can be modelled as 2-3-4 tree , which is a sub-class of B tree (below). A black node with one red node can be seen as linked together as a 3-node , and a black node with 2 red child nodes can be seen as a 4-node."
+            }
+        ]
+    },{
+        "id": "bTree",
+        "reference": "http://en.m.wikibooks.org/wiki/Data_Structures/Trees#B_Trees",
+        "definitions":[
+            {
+                "title": "B Tree",
+                "description": "B Tree"
+            }
+        ]
+    },{
+        "id": "treap",
+        "reference": "http://en.m.wikibooks.org/wiki/Data_Structures/Trees#Treaps",
+        "definitions":[
+            {
+                "title": "Treap",
+                "description": "The invariant in a binary tree is that left is less than right with respect to insertion keys. e.g. for a key with order, ord(L) < ord(R). This doesn't dictate the relationship of nodes however, and left and right rotation does not affect the above. Therefore another order can be imposed. If the order is randomised, it is likely to counteract any skewness of a plain binary tree e.g. when inserting an already sorted input in order."
             }
         ]
     },
     {
         "id": "heap",
+        "reference": "http://en.m.wikibooks.org/wiki/Data_Structures/Min_and_Max_Heaps",
         "definitions":[
             {
-                "title": "Heap",
-                "description": "Min and max heaps for representing ordering based on priorities"
+                "title": "Min and Max Heap",
+                "description": "A heap is an efficient semi-ordered data structure for storing a collection of orderable data."
             }
         ]
     },
     {
         "id": "graph",
+        "reference": "http://en.m.wikibooks.org/wiki/Data_Structures/Graphs#Graphs",
         "definitions":[
             {
                 "title": "Graph",
-                "description": "Graph structures for representing more general relationships between data elements"
+                "description": "A graph is a mathematical structure consisting of a set of vertices (also called nodes)"
+            }
+        ]
+    },
+    {
+        "id": "directedGraph",
+        "reference": "http://en.m.wikibooks.org/wiki/Data_Structures/Graphs#Directed_Graphs",
+        "definitions":[
+            {
+                "title": "Directed Graph",
+                "description": "The number of edges with one endpoint on a given vertex is called that vertex's degree. In a directed graph, the number of edges that point to a given vertex is called its in-degree, and the number that point from it is called its out-degree. Often, we may want to be able to distinguish between different nodes and edges. We can associate labels with either. We call such a graph labeled."
+            }
+        ]
+    },
+    {
+        "id": "undirectedGraph",
+        "reference": "http://en.m.wikibooks.org/wiki/Data_Structures/Graphs#Undirected_Graphs",
+        "definitions":[
+            {
+                "title": "Undirected Graph",
+                "description": "In a directed graph, the edges point from one vertex to another, while in an undirected graph, they merely connect two vertices."
+            }
+        ]
+    },
+    {
+        "id": "weightedGraph",
+        "reference": "http://en.m.wikibooks.org/wiki/Data_Structures/Graphs#Weighted_Graphs",
+        "definitions":[
+            {
+                "title": "Weighted Graph",
+                "description": "We may also want to associate some cost or weight to the traversal of an edge. When we add this information, the graph is called weighted. An example of a weighted graph would be the distance between the capitals of a set of countries."
+            }
+        ]
+    },
+    {
+        "id": "graphRepresentation",
+        "reference": "http://en.m.wikibooks.org/wiki/Data_Structures/Graphs#Graph_Representations",
+        "definitions":[
+            {
+                "title": "Graph Representation",
+                "description": "An adjacency matrix is one of the two common ways to represent a graph. The adjacency matrix shows which nodes are adjacent to one another. "
+            }
+        ]
+    },
+    {
+        "id": "graphTraversal",
+        "reference": "http://en.m.wikibooks.org/wiki/Data_Structures/Graphs#Graph_Traversals",
+        "definitions":[
+            {
+                "title": "Graph Traversal",
+                "description": "Start at vertex a, visit its neighbour b, then b's neighbour c and keep going until reach 'a dead end' then iterate back and visit nodes reachable from second last visited vertex and keep applying the same principle."
             }
         ]
     },
     {
         "id": "hash",
+        "reference": "http://en.m.wikibooks.org/wiki/Data_Structures/Hash_Tables",
         "definitions":[
             {
                 "title": "Hash Table",
-                "description": "Hash tables for the efficient retrieval of strings and other objects"
+                "description": "A hash table, or a hash map, is a data structure that associates keys with values. The primary operation it supports efficiently is a lookup: given a key (e.g. a person's name), find the corresponding value (e.g. that person's telephone number). It works by transforming the key using a hash function into a hash, a number that the hash table uses to locate the desired value."
             }
         ]
     }
