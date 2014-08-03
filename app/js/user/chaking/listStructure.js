@@ -10,6 +10,13 @@ Chaking.ListStructure = function(){
         return new Iterator( this.firstNode );
     };
     this.getEnd = function(){
+        var lastNode = this.firstNode;
+        if( lastNode !== null ){
+            while( true ){
+                if( lastNode.getNext() === null ){ break; }
+            }
+        }
+        return new Iterator( lastNode );
     };
     this.prepend = function( value ){
         var node = new Node( value );
@@ -48,6 +55,18 @@ Chaking.ListStructure = function(){
         }
     };
     this.getSize = function(){
+        if( this.isEmpty() ){ return 0; }
+
+        var iterator = this.getBegin();
+        var lastIterator = this.getEnd();
+        var count = 0;
+        while( true ){
+            if( iterator.isEqual( lastIterator ) ){ break; }
+
+            count++;
+            iterator.moveNext();
+        }
+        return count;
     };
     this.getAt = function(){
     };

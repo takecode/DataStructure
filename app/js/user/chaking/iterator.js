@@ -47,4 +47,8 @@ Chaking.Iterator = function( node ){
     this.getNode = function(){
         return this.node;
     };
+    this.isExist = function(){
+        if( this.node === null ){ return false; }
+        else{ return true; }
+    };
 };
