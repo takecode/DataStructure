@@ -45,11 +45,18 @@ function( $scope, $location, $stateParams, UrlService ){
     };
 
     $scope.$watch( 'subChapterId', function(){
-        for( var count in $scope.definitionList ){
+        var count;
+        for( count in $scope.definitionList ){
             var chapter = $scope.definitionList[count];
             if( chapter.id === $scope.subChapterId ){
                 $scope.chapter = chapter;
                 $scope.definitions = chapter.definitions;
+            }
+        }
+        for( count in $scope.subs ){
+            var sub = $scope.subs[count];
+            if( sub.id === $scope.subChapterId ){
+                $scope.hasCode = sub.hasCode;
             }
         }
     });
@@ -69,7 +76,6 @@ function( $scope, $location, $stateParams, UrlService ){
         var path = $location.path();
         var id = UrlService.getLastWord( path );
 
-        //if( theId === $scope.subChapterId ){
         if( id === theId ){
             return 'btn-primary active';
         } else {

@@ -47,19 +47,23 @@
             },
             {
                 "name": "Singly Linked List",
-                "id": "singlyLinkedList"
+                "id": "singlyLinkedList",
+                "hasCode": true
             },
             {
                 "name": "Vector",
-                "id": "vector"
+                "id": "vector",
+                "hasCode": true
             },
             {
                 "name": "Bidirectional List",
-                "id": "bidirectionalList"
+                "id": "bidirectionalList",
+                "hasCode": true
             },
             {
                 "name": "Doubly Linked List",
-                "id": "doublyLinkedList"
+                "id": "doublyLinkedList",
+                "hasCode": true
             },
             {
                 "name": "Advantages / Disadvantages",
@@ -73,7 +77,8 @@
         "subs":[
             {
                 "name": "Stack & Queue",
-                "id": "stackAndQueue"
+                "id": "stackAndQueue",
+                "hasCode": true
             }
         ]
     },
