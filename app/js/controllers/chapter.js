@@ -1,7 +1,10 @@
-function ChapterController( $scope, $location, $stateParams, UrlService ){
+function ChapterController( $scope, $location, $stateParams, UrlService, DataStructureFactory, DefinitionFactory ){
+    var dataStructures = DataStructureFactory.list;
+    var definitions = DefinitionFactory.list;
+
     $scope.initialize = function(){
-        for( var count in $scope.dataStructures ){
-            var dataStructure = $scope.dataStructures[count];
+        for( var count in dataStructures ){
+            var dataStructure = dataStructures[count];
             if( dataStructure.id === $stateParams.chapterId ){
                 $scope.dataStructure = dataStructure;
                 $scope.subs = dataStructure.subs;
@@ -11,8 +14,8 @@ function ChapterController( $scope, $location, $stateParams, UrlService ){
 
     $scope.$watch( 'subChapterId', function(){
         var count;
-        for( count in $scope.definitionList ){
-            var chapter = $scope.definitionList[count];
+        for( count in definitions ){
+            var chapter = definitions[count];
             if( chapter.id === $scope.subChapterId ){
                 $scope.chapter = chapter;
                 $scope.definitions = chapter.definitions;

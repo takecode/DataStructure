@@ -13,6 +13,5 @@ function IndexController( $scope, $http, DataStructureFactory, DefinitionFactory
 
     $http.get('json/Definition.json').success(function(data) {
         DefinitionFactory.list = data;
-        $scope.definitionList = DefinitionFactory.list;
     });
 }

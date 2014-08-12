@@ -37,7 +37,7 @@
     angular
         .module( 'DataStructureApp' )
         .controller( 'ChapterController',
-            ['$scope', '$location', '$stateParams', 'UrlService', ChapterController] );
+            ['$scope', '$location', '$stateParams', 'UrlService', 'DataStructureFactory', 'DefinitionFactory', ChapterController] );
 
     angular
         .module( 'DataStructureApp' )
