@@ -83,19 +83,19 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('default', [
-    'jshint',
+    //'jshint',
     'connect',
     'concat',
     'watch'
     ]);
 
     grunt.registerTask('test', [
-    'jshint',
+    //'jshint',
     'karma'
     ]);
 
     grunt.registerTask('dist', [
-    'jshint',
+    //'jshint',
     'copy'
     ]);
 };
