@@ -2,7 +2,7 @@
  * Created by YeongminCha on 2014. 08. 05..
  */
 
- /*jshint -W117 */
+ /*jshint undef:false */
 
 (function () {
     angular.module('DataStructureApp', ['ui.router']);

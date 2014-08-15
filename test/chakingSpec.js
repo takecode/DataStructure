@@ -1,6 +1,7 @@
 'use strict';
 
 describe('Chaking Test', function() {
+
     it('Node & Chain Test', function() {
         var Node = Chaking.Node;
         var Chain = Chaking.Chain;
