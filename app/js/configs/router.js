@@ -1,3 +1,5 @@
+/*jshint unused:false */
+
 function UiRouterConfig($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/home');
 

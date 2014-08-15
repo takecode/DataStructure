@@ -1,6 +1,6 @@
-function IndexController( $scope, $http, DataStructureFactory, DefinitionFactory ){
-    'use strict';
+/*jshint unused:false */
 
+function IndexController( $scope, $http, DataStructureFactory, DefinitionFactory ){
     $http.get('json/Users.json').success(function(data) {
         $scope.users = data;
         $scope.user = $scope.users[0];

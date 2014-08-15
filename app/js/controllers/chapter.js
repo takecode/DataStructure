@@ -1,3 +1,5 @@
+/*jshint unused:false */
+
 function ChapterController( $scope, $location, $stateParams, UrlService, DataStructureFactory, DefinitionFactory ){
     var dataStructures = DataStructureFactory.list;
     var definitions = DefinitionFactory.list;

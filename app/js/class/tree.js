@@ -1,5 +1,3 @@
-'use strict';
-
 var MAX = 1000;
 
 function Node( number ){

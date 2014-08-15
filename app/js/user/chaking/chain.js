@@ -1,8 +1,6 @@
 var Chaking = Chaking || {};
 
 Chaking.Chain = function(){
-    'use strict';
-
     this.firstNode = null;
 
     this.put = function( node ){

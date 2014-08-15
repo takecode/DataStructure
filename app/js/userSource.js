@@ -1,8 +1,6 @@
 var Chaking = Chaking || {};
 
 Chaking.Chain = function(){
-    'use strict';
-
     this.firstNode = null;
 
     this.put = function( node ){
@@ -45,8 +43,6 @@ Chaking.Chain = function(){
 var Chaking = Chaking || {};
 
 Chaking.ListStructure = function(){
-    'use strict';
-
     var Node = Chaking.Node;
     var Iterator = Chaking.Iterator;
     this.firstNode = null;
@@ -118,8 +114,6 @@ Chaking.ListStructure = function(){
 };
 
 Chaking.Iterator = function( node ){
-    'use strict';
-
     var Node = Chaking.Node;
     if( typeof node === 'undefined' ){
         this.node = null;
@@ -173,8 +167,6 @@ Chaking.Iterator = function( node ){
 var Chaking = Chaking || {};
 
 Chaking.Node = function( value, nextNode ){
-    'use strict';
-
     this.value = value;
     if( typeof nextNode !== 'undefined' ){
         this.nextNode = nextNode;

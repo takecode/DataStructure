@@ -1,3 +1,5 @@
+/*jshint unused:false */
+
 function UrlService(){
     this.getLastWord = function( url ){
         var wordList = this.getWordList( url );

@@ -1,3 +1,5 @@
+/*jshint unused:false */
+
 function NodeController( $scope ){
     $scope.initialize= function () {
         $scope.calculateImagePosition();

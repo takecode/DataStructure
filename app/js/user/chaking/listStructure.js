@@ -1,8 +1,6 @@
 var Chaking = Chaking || {};
 
 Chaking.ListStructure = function(){
-    'use strict';
-
     var Node = Chaking.Node;
     var Iterator = Chaking.Iterator;
     this.firstNode = null;
@@ -74,8 +72,6 @@ Chaking.ListStructure = function(){
 };
 
 Chaking.Iterator = function( node ){
-    'use strict';
-
     var Node = Chaking.Node;
     if( typeof node === 'undefined' ){
         this.node = null;

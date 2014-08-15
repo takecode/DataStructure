@@ -1,3 +1,5 @@
+/*jshint unused:false */
+
 function SourceController( $scope, $http, $state, $stateParams ){
     $scope.initialize = function(){
         $scope.$parent.subChapterId = $stateParams.subChapterId;
@@ -18,4 +20,4 @@ function SourceController( $scope, $http, $state, $stateParams ){
     });
 
     $scope.initialize();
-};
+}

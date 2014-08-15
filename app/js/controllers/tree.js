@@ -1,3 +1,5 @@
+/*jshint unused:false */
+
 function TreeController( $scope ){
     $scope.initialize= function () {
         $scope.tree = new Tree();

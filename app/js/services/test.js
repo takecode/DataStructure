@@ -1,3 +1,5 @@
+/*jshint unused:false */
+
 function TestService(){
     this.testIterator = function(){
         var Iterator = Chaking.Iterator;
