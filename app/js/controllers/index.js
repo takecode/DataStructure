@@ -3,6 +3,7 @@
 function IndexController( $scope, $http, DataStructureFactory, DefinitionFactory ){
     $http.get('json/Users.json').success(function(data) {
         $scope.users = data;
+        // Initial User.
         $scope.user = $scope.users[0];
     });
 

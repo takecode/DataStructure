@@ -1,7 +1,7 @@
 /*jshint unused:false */
 
 function NodeController( $scope ){
-    $scope.initialize= function () {
+    this.initialize= function () {
         $scope.calculateImagePosition();
     };
 
@@ -26,5 +26,5 @@ function NodeController( $scope ){
         $scope.treeWidth[depth] = width;
     };
 
-    $scope.initialize();
+    this.initialize();
 }

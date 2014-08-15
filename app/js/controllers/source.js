@@ -1,7 +1,7 @@
 /*jshint unused:false */
 
 function SourceController( $scope, $http, $state, $stateParams ){
-    $scope.initialize = function(){
+    var initialize = function(){
         $scope.$parent.subChapterId = $stateParams.subChapterId;
         $scope.$parent.content = 'source';
 
@@ -16,8 +16,8 @@ function SourceController( $scope, $http, $state, $stateParams ){
     };
 
     $scope.$watch( 'user', function(){
-        $scope.initialize();
+        initialize();
     });
 
-    $scope.initialize();
+    initialize();
 }

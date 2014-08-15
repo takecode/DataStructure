@@ -4,7 +4,7 @@ function ChapterController( $scope, $location, $stateParams, UrlService, DataStr
     var dataStructures = DataStructureFactory.list;
     var definitions = DefinitionFactory.list;
 
-    $scope.initialize = function(){
+    this.initialize = function(){
         for( var count in dataStructures ){
             var dataStructure = dataStructures[count];
             if( dataStructure.id === $stateParams.chapterId ){
@@ -53,6 +53,6 @@ function ChapterController( $scope, $location, $stateParams, UrlService, DataStr
         }
     };
 
-    $scope.initialize();
+    this.initialize();
 
 }
