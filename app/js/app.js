@@ -28,6 +28,9 @@
     angular.module( 'DataStructureApp' )
     .service( 'TestService', TestService );
 
+    angular.module( 'DataStructureApp' )
+    .service( 'DummyService', DummyService );
+
     // -- Directive --
     angular.module( 'DataStructureApp' )
     .directive( 'testDirective', TestDirective );
@@ -48,4 +51,9 @@
     angular.module( 'DataStructureApp' )
     .controller( 'SourceController',
     ['$scope', '$http', '$state', '$stateParams', SourceController] );
+
+    angular.module( 'DataStructureApp' )
+    .controller( 'ExampleController',
+    ['$scope', '$stateParams', 'DummyService', ExampleController] );
+
 })();

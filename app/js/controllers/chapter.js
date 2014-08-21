@@ -37,17 +37,6 @@ function ChapterController( $scope, $location, $state, $stateParams, UrlService,
         }
     });
 
-    $scope.$watch( 'contentType', function(){
-        $scope.flagDefinition = false;
-        $scope.flagSource = false;
-        if( $scope.contentType === 'definition' ){
-            $scope.flagDefinition = true;
-        }
-        else if( $scope.contentType === 'source' ){
-            $scope.flagSource = true;
-        }
-    });
-
     $scope.getContentClass = function( contentType ){
         if( $scope.contentType === contentType ){
             return 'bold';
@@ -55,7 +44,7 @@ function ChapterController( $scope, $location, $state, $stateParams, UrlService,
         else{
             return '';
         }
-    }
+    };
 
     $scope.getClass = function( theId ) {
         var path = $location.path();
@@ -70,7 +59,7 @@ function ChapterController( $scope, $location, $state, $stateParams, UrlService,
 
     $scope.selectChapter = function( theId ){
         $scope.subChapterId = theId;
-    }
+    };
 
     this.initialize();
 }

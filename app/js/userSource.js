@@ -76,7 +76,9 @@ Chaking.ListStructure = function(){
     };
     this.removeFirst = function(){
         if( this.firstNode !== null ){
+            var node = this.firstNode;
             this.firstNode = this.firstNode.getNext();
+            delete node;
         }
     };
     this.removeAfter = function( iterator ){
@@ -84,6 +86,7 @@ Chaking.ListStructure = function(){
         var nextNode = thisNode.getNext();
         if( nextNode !== null ){
             thisNode.setNext( nextNode.getNext() );
+            delete nextNode;
         }
     };
     this.isEmpty = function(){

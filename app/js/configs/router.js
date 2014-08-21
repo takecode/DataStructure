@@ -54,5 +54,10 @@ function UiRouterConfig($stateProvider, $urlRouterProvider) {
         templateUrl: 'html/sourceTemplate.html',
         controller: 'SourceController'
     })
+    .state( 'chapter.example', {
+        url: '/example/{subChapterId}',
+        templateUrl: 'html/exampleTemplate.html',
+        controller: 'ExampleController'
+    })
     ;
 }
