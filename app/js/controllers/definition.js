@@ -3,7 +3,7 @@
 function DefinitionController( $scope, $stateParams ){
     this.initialize = function(){
         $scope.$parent.subChapterId = $stateParams.subChapterId;
-        $scope.$parent.content = 'definition';
+        $scope.$parent.contentType = 'definition';
     };
 
     this.initialize();

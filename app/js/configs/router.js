@@ -40,17 +40,17 @@ function UiRouterConfig($stateProvider, $urlRouterProvider) {
         }
     })
     .state( 'chapter', {
-        url: '/chapter/:chapterId',
+        url: '/chapter/{chapterId}',
         templateUrl: 'html/chapterTemplate.html',
         controller: 'ChapterController'
     })
     .state( 'chapter.definition', {
-        url: '/definition/:subChapterId',
+        url: '/definition/{subChapterId}',
         templateUrl: 'html/definitionTemplate.html',
         controller: 'DefinitionController'
     })
     .state( 'chapter.source', {
-        url: '/source/:subChapterId',
+        url: '/source/{subChapterId}',
         templateUrl: 'html/sourceTemplate.html',
         controller: 'SourceController'
     })

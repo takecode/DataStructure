@@ -1,16 +1,16 @@
 Chapter List: [
 <span ng-repeat="sub in subs">
     <span ng-hide="$first && $last">
-        <a ng-class="getClass(sub.id)" ui-sref="chapter.definition({ subChapterId: sub.id })">
+        <span ng-class="getClass(sub.id)" ng-click="selectChapter( sub.id )" class="pointer">
             {{sub.name}}<span ng-show="sub.hasCode">&#9733;</span>
-        </a>
+        </span>
         <span ng-show="!$last"> - </span>
     </span>
 </span>
 ]
 <p ng-show="hasCode">
-<a ng-class="{bold: flagDefinition}" ui-sref="chapter.definition({ subChapterId: subChapterId })">Definition</a>
-<a ng-class="{bold: flagSource}" ui-sref="chapter.source({ subChapterId: subChapterId })">Source</a>
+<a ng-class="getContentClass( 'definition' )" ui-sref="chapter.definition({ subChapterId: subChapterId })">Definition</a>
+<a ng-class="getContentClass( 'source' )" ui-sref="chapter.source({ subChapterId: subChapterId })">Source</a>
 </p>
 
 <div ui-view></div>

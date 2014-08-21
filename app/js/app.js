@@ -1,53 +1,51 @@
 /**
- * Created by YeongminCha on 2014. 08. 05..
- */
+* Created by YeongminCha on 2014. 08. 05..
+*/
 
- /*jshint undef:false */
+/*jshint undef:false */
 
 (function () {
     angular.module('DataStructureApp', ['ui.router']);
 
-    angular
-        .module( 'DataStructureApp' )
-        .config( ['$stateProvider', '$urlRouterProvider', UiRouterConfig] );
+    // -- Config --
+    angular.module( 'DataStructureApp' )
+    .config( ['$stateProvider', '$urlRouterProvider', UiRouterConfig] );
 
-    angular
-        .module( 'DataStructureApp' )
-        .factory( 'DataStructureFactory', ListFactory );
+    // -- Factory --
+    angular.module( 'DataStructureApp' )
+    .factory( 'DataStructureFactory', ListFactory );
 
-    angular
-        .module( 'DataStructureApp' )
-        .factory( 'DefinitionFactory', ListFactory );
+    angular.module( 'DataStructureApp' )
+    .factory( 'DefinitionFactory', ListFactory );
 
-    angular
-        .module( 'DataStructureApp' )
-        .service( 'StateService', StateService );
+    // -- Service --
+    angular.module( 'DataStructureApp' )
+    .service( 'StateService', StateService );
 
-    angular
-        .module( 'DataStructureApp' )
-        .service( 'UrlService', UrlService );
+    angular.module( 'DataStructureApp' )
+    .service( 'UrlService', UrlService );
 
-    angular
-        .module( 'DataStructureApp' )
-        .service( 'TestService', TestService );
+    angular.module( 'DataStructureApp' )
+    .service( 'TestService', TestService );
 
-    angular
-        .module( 'DataStructureApp' )
-        .controller( 'IndexController',
-            ['$scope', '$http', 'DataStructureFactory', 'DefinitionFactory', IndexController] );
+    // -- Directive --
+    angular.module( 'DataStructureApp' )
+    .directive( 'testDirective', TestDirective );
 
-    angular
-        .module( 'DataStructureApp' )
-        .controller( 'ChapterController',
-            ['$scope', '$location', '$stateParams', 'UrlService', 'DataStructureFactory', 'DefinitionFactory', ChapterController] );
+    // -- Controller --
+    angular.module( 'DataStructureApp' )
+    .controller( 'IndexController',
+    ['$scope', '$http', 'DataStructureFactory', 'DefinitionFactory', IndexController] );
 
-    angular
-        .module( 'DataStructureApp' )
-        .controller( 'DefinitionController',
-            ['$scope', '$stateParams', DefinitionController] );
+    angular.module( 'DataStructureApp' )
+    .controller( 'ChapterController',
+    ['$scope', '$location', '$state', '$stateParams', 'UrlService', 'DataStructureFactory', 'DefinitionFactory', ChapterController] );
 
-    angular
-        .module( 'DataStructureApp' )
-        .controller( 'SourceController',
-            ['$scope', '$http', '$state', '$stateParams', SourceController] );
+    angular.module( 'DataStructureApp' )
+    .controller( 'DefinitionController',
+    ['$scope', '$stateParams', DefinitionController] );
+
+    angular.module( 'DataStructureApp' )
+    .controller( 'SourceController',
+    ['$scope', '$http', '$state', '$stateParams', SourceController] );
 })();

@@ -3,7 +3,7 @@
 function SourceController( $scope, $http, $state, $stateParams ){
     var initialize = function(){
         $scope.$parent.subChapterId = $stateParams.subChapterId;
-        $scope.$parent.content = 'source';
+        $scope.$parent.contentType = 'source';
 
         var url = 'js/user/' + $scope.user.id + '/' + $scope.subChapterId + '.js';
 

@@ -1,6 +1,6 @@
 /*jshint unused:false */
 
-function ChapterController( $scope, $location, $stateParams, UrlService, DataStructureFactory, DefinitionFactory ){
+function ChapterController( $scope, $location, $state, $stateParams, UrlService, DataStructureFactory, DefinitionFactory ){
     var dataStructures = DataStructureFactory.list;
     var definitions = DefinitionFactory.list;
 
@@ -8,13 +8,19 @@ function ChapterController( $scope, $location, $stateParams, UrlService, DataStr
         for( var count in dataStructures ){
             var dataStructure = dataStructures[count];
             if( dataStructure.id === $stateParams.chapterId ){
-                $scope.dataStructure = dataStructure;
                 $scope.subs = dataStructure.subs;
             }
+        }
+        if( typeof $scope.contentType=== 'undefined' ){
+            $scope.contentType = 'definition';
+        }
+        if( typeof $scope.subChapterId === 'undefined' ){
+            $scope.subChapterId = $scope.subs[0].id;
         }
     };
 
     $scope.$watch( 'subChapterId', function(){
+        $state.go( 'chapter.' + $scope.contentType, {'subChapterId': $scope.subChapterId} );
         var count;
         for( count in definitions ){
             var chapter = definitions[count];
@@ -31,16 +37,25 @@ function ChapterController( $scope, $location, $stateParams, UrlService, DataStr
         }
     });
 
-    $scope.$watch( 'content', function(){
+    $scope.$watch( 'contentType', function(){
         $scope.flagDefinition = false;
         $scope.flagSource = false;
-        if( $scope.content === 'definition' ){
+        if( $scope.contentType === 'definition' ){
             $scope.flagDefinition = true;
         }
-        else if( $scope.content === 'source' ){
+        else if( $scope.contentType === 'source' ){
             $scope.flagSource = true;
         }
     });
+
+    $scope.getContentClass = function( contentType ){
+        if( $scope.contentType === contentType ){
+            return 'bold';
+        }
+        else{
+            return '';
+        }
+    }
 
     $scope.getClass = function( theId ) {
         var path = $location.path();
@@ -53,6 +68,9 @@ function ChapterController( $scope, $location, $stateParams, UrlService, DataStr
         }
     };
 
-    this.initialize();
+    $scope.selectChapter = function( theId ){
+        $scope.subChapterId = theId;
+    }
 
+    this.initialize();
 }
