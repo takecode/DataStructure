@@ -5,11 +5,13 @@ function ExampleController( $scope, $stateParams, DummyService ){
         $scope.$parent.subChapterId = $stateParams.subChapterId;
         $scope.$parent.contentType = 'example';
 
-        var dummyList = DummyService.getDummyList( Chaking.ListStructure );
-        var iterator = dummyList.getBegin();
-
+        this.dummyList = DummyService.getDummyList( Chaking.ListStructure );
         $scope.listArray = [];
-        dummyList.removeFirst();
+        this.refresh();
+    };
+
+    this.refresh = function(){
+        var iterator = this.dummyList.getBegin();
         while( iterator.isExist() ){
             $scope.listArray.push( iterator.getNode() );
             iterator.moveNext();

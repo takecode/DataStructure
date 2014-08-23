@@ -10,7 +10,7 @@ function DummyService(){
         }
 
         return list;
-    }
+    };
 
     this.getDummyList = function( List ){
         var list = new List();
@@ -22,5 +22,5 @@ function DummyService(){
         list.prepend( 12 );
 
         return list;
-    }
+    };
 }
