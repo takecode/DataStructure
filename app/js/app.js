@@ -35,6 +35,13 @@
     angular.module( 'DataStructureApp' )
     .directive( 'testDirective', TestDirective );
 
+    angular.module( 'DataStructureApp' )
+    .directive( 'exampleDirective',
+    ['$compile', ExampleDirective] );
+
+    angular.module( 'DataStructureApp' )
+    .directive( 'listStructureDirective', ListStructureDirective );
+
     // -- Controller --
     angular.module( 'DataStructureApp' )
     .controller( 'IndexController',

@@ -69,7 +69,7 @@
         ]
     },
     {
-        "id": "listStructure",
+        "id": "list-structure",
         "reference": "http://en.m.wikibooks.org/wiki/Data_Structures/List_Structures#List_Structures_and_Iterators",
         "definitions":[
             {

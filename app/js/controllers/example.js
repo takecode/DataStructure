@@ -16,7 +16,7 @@ function ExampleController( $scope, $stateParams, DummyService ){
             $scope.listArray.push( iterator.getNode() );
             iterator.moveNext();
         }
-    };
+    }
 
     this.initialize();
 }

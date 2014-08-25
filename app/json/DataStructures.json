@@ -37,11 +37,11 @@
     },
     {
         "id": "listStructureChapter",
-        "defaultId": "listStructure",
+        "defaultId": "list-structure",
         "subs":[
             {
                 "name": "List Structure",
-                "id": "listStructure",
+                "id": "list-structure",
                 "hasCode": true,
                 "hasVisual": true
             },

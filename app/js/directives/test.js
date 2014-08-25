@@ -2,7 +2,7 @@
 
 function TestDirective(){
     return {
-        restrict: 'E',
-        templateUrl: 'html/custom/test.html'
+        restrict: 'A',
+        template: 'This is the Test.'
     };
 }
