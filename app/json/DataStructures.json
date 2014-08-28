@@ -21,7 +21,7 @@
         "subs":[
             {
                 "name": "Asymptonic Notation",
-                "id": "asymptonicNotation"
+                "id": "asymptonic-notation"
             }
         ]
     },
@@ -47,7 +47,7 @@
             },
             {
                 "name": "Singly Linked List",
-                "id": "singlyLinkedList",
+                "id": "singly-linked-list",
                 "hasCode": true
             },
             {
@@ -57,12 +57,12 @@
             },
             {
                 "name": "Bidirectional List",
-                "id": "bidirectionalList",
+                "id": "bidirectional-list",
                 "hasCode": true
             },
             {
                 "name": "Doubly Linked List",
-                "id": "doublyLinkedList",
+                "id": "doublyLinked-list",
                 "hasCode": true
             },
             {

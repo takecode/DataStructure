@@ -42,6 +42,9 @@
     angular.module( 'DataStructureApp' )
     .directive( 'listStructureDirective', ListStructureDirective );
 
+    angular.module( 'DataStructureApp' )
+    .directive( 'singlyLinkedListDirective', SinglyLinkedListDirective );
+
     // -- Controller --
     angular.module( 'DataStructureApp' )
     .controller( 'IndexController',

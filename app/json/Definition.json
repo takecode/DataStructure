@@ -42,7 +42,7 @@
         ]
     },
     {
-        "id": "asymptonicNotation",
+        "id": "asymptonic-notation",
         "reference": "http://en.m.wikibooks.org/wiki/Data_Structures/Asymptotic_Notation#Introduction",
         "definitions":[
             {
@@ -105,7 +105,7 @@
         ]
     },
     {
-        "id": "singlyLinkedList",
+        "id": "singly-linked-list",
         "reference": "http://en.m.wikibooks.org/wiki/Data_Structures/List_Structures#Singly_Linked_List",
         "definitions":[
             {
@@ -125,7 +125,7 @@
         ]
     },
     {
-        "id": "bidirectionalList",
+        "id": "bidirectional-list",
         "reference": "http://en.m.wikibooks.org/wiki/Data_Structures/List_Structures#Bidirectional_Lists",
         "definitions":[
             {
@@ -135,7 +135,7 @@
         ]
     },
     {
-        "id": "doublyLinkedList",
+        "id": "doublyLinked-list",
         "reference": "http://en.m.wikibooks.org/wiki/Data_Structures/List_Structures#Doubly_Linked_List_Implementation",
         "definitions":[
             {
