@@ -1,0 +1,8 @@
+<button ng-click="addRandom()">Add Random Value</button>
+<br>
+<span ng-repeat="node in nodeArray track by $index">
+    {{node.value}}
+    <span ng-hide="$last">
+        ->
+    </span>
+</span>

@@ -1,12 +1,13 @@
 /*jshint unused:false */
 
 function DummyService(){
+    this.size = 10;
+    this.MAX = this.size * 10;
     this.getDummyList = function( List, size ){
-        if( typeof size === 'undefined' ){ size = 10; }
+        if( typeof size !== 'undefined' ){ this.size = size; }
         var list = new List();
-        var MAX = size * 10;
-        for( var i = 0; i < size; i++ ){
-            list.prepend( Math.floor((Math.random() * MAX) + 1) );
+        for( var i = 0; i < this.size; i++ ){
+            list.prepend( Math.floor((Math.random() * this.MAX) + 1) );
         }
 
         return list;
@@ -23,4 +24,8 @@ function DummyService(){
 
         return list;
     };
+
+    this.getDummyValue = function(){
+        return Math.floor((Math.random() * this.MAX) + 1);
+    }
 }
