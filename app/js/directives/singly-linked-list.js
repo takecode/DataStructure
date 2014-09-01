@@ -5,9 +5,9 @@ function SinglyLinkedListDirective(){
         restrict: 'A',
         templateUrl: 'html/custom/listStructureTemplate.html',
         controller: function( $scope, DummyService ){
-            $scope.myMessage = 'haha';
+            this.dataStructure = $scope.user.rootClass.SinglyLinkedList;
 
-            $scope.dummyList = DummyService.getDummyList( Chaking.SinglyLinkedList );
+            $scope.dummyList = DummyService.getDummyList( this.dataStructure );
             $scope.refresh = function(){
                 $scope.nodeArray = [];
                 var iterator = $scope.dummyList.getBegin();
@@ -21,8 +21,7 @@ function SinglyLinkedListDirective(){
             $scope.addRandom = function(){
                 $scope.dummyList.prepend( DummyService.getDummyValue() );
                 $scope.refresh();
-            }
-
+            };
         }
     };
 }

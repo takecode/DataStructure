@@ -1,10 +1,14 @@
 /*jshint unused:false */
 
 function ExampleController( $scope, $stateParams, DummyService ){
-    this.initialize = function(){
+    var initialize = function(){
         $scope.$parent.subChapterId = $stateParams.subChapterId;
         $scope.$parent.contentType = 'example';
     };
 
-    this.initialize();
+    $scope.$watch( 'user', function(){
+        initialize();
+    });
+
+    initialize();
 }

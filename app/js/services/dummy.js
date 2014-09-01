@@ -27,5 +27,5 @@ function DummyService(){
 
     this.getDummyValue = function(){
         return Math.floor((Math.random() * this.MAX) + 1);
-    }
+    };
 }
