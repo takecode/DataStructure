@@ -4,10 +4,12 @@ function ListStructureDirective(){
     return {
         restrict: 'A',
         templateUrl: 'html/custom/listStructureTemplate.html',
-        controller: function( $scope, DummyService ){
-            this.dataStructure = $scope.user.rootClass.ListStructure;
+        controller: function( $scope, UserService, DummyService ){
+            $scope.dataStructure = UserService.rootClass.ListStructure;
+            $scope.user = UserService.user;
+            $scope.message = 'id:' + $scope.user.id;
 
-            $scope.dummyList = DummyService.getDummyList( this.dataStructure );
+            $scope.dummyList = DummyService.getDummyList( $scope.dataStructure );
             $scope.refresh = function(){
                 $scope.nodeArray = [];
                 var iterator = $scope.dummyList.getBegin();

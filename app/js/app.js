@@ -20,6 +20,9 @@
 
     // -- Service --
     angular.module( 'DataStructureApp' )
+    .service( 'UserService', UserService );
+
+    angular.module( 'DataStructureApp' )
     .service( 'StateService', StateService );
 
     angular.module( 'DataStructureApp' )
@@ -48,7 +51,7 @@
     // -- Controller --
     angular.module( 'DataStructureApp' )
     .controller( 'IndexController',
-    ['$scope', '$http', 'DataStructureFactory', 'DefinitionFactory', IndexController] );
+    ['$scope', '$http', 'UserService', 'DataStructureFactory', 'DefinitionFactory', IndexController] );
 
     angular.module( 'DataStructureApp' )
     .controller( 'ChapterController',
@@ -64,6 +67,6 @@
 
     angular.module( 'DataStructureApp' )
     .controller( 'ExampleController',
-    ['$scope', '$stateParams', 'DummyService', ExampleController] );
+    ['$scope', '$stateParams', 'DummyService', 'UserService', ExampleController] );
 
 })();
