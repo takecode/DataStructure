@@ -67,6 +67,6 @@
 
     angular.module( 'DataStructureApp' )
     .controller( 'ExampleController',
-    ['$scope', '$stateParams', 'DummyService', 'UserService', ExampleController] );
+    ['$scope', '$stateParams', 'DummyService', ExampleController] );
 
 })();
