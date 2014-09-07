@@ -4,19 +4,23 @@ function SinglyLinkedListDirective(){
     return {
         restrict: 'A',
         templateUrl: 'html/custom/listStructureTemplate.html',
-        controller: function( $scope, DummyService ){
-            this.dataStructure = $scope.user.rootClass.SinglyLinkedList;
-
-            $scope.dummyList = DummyService.getDummyList( this.dataStructure );
+        controller: function( $scope, UserService, DummyService ){
             $scope.refresh = function(){
+                var dataStructure = UserService.rootClass.ListStructure;
                 $scope.nodeArray = [];
-                var iterator = $scope.dummyList.getBegin();
-                while( iterator.isExist() ){
-                    $scope.nodeArray.push( iterator.getNode() );
-                    iterator.moveNext();
+                if( typeof dataStructure !== 'undefined'){
+                    var dummyList = DummyService.getDummyList( dataStructure );
+                    var iterator = dummyList.getBegin();
+                    while( iterator.isExist() ){
+                        $scope.nodeArray.push( iterator.getNode() );
+                        iterator.moveNext();
+                    }
                 }
             };
-            $scope.refresh();
+
+            $scope.$watch( 'user', function(){
+                $scope.refresh();
+            });
 
             $scope.addRandom = function(){
                 $scope.dummyList.prepend( DummyService.getDummyValue() );

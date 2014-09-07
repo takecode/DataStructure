@@ -135,7 +135,7 @@
         ]
     },
     {
-        "id": "doublyLinked-list",
+        "id": "doubly-linked-list",
         "reference": "http://en.m.wikibooks.org/wiki/Data_Structures/List_Structures#Doubly_Linked_List_Implementation",
         "definitions":[
             {

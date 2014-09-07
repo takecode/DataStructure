@@ -12,11 +12,11 @@ Chaking.Node = function( value, nextNode ){
     this.getNext = function(){
         return this.nextNode;
     };
-    this.getValue = function(){
-        return this.value;
-    };
     this.setNext = function( nextNode ){
         this.nextNode = nextNode;
+    };
+    this.getValue = function(){
+        return this.value;
     };
     this.setValue = function( value ){
         this.value = value;

@@ -2,7 +2,7 @@ var Chaking = Chaking || {};
 
 Chaking.ListStructure = function(){
     var Node = Chaking.Node;
-    var Iterator = Chaking.Iterator;
+    var Iterator = Chaking.ListStructure.Iterator;
     this.firstNode = null;
     this.getBegin = function(){
         return new Iterator( this.firstNode );
@@ -72,7 +72,7 @@ Chaking.ListStructure = function(){
     };
 };
 
-Chaking.Iterator = function( node ){
+Chaking.ListStructure.Iterator = function( node ){
     var Node = Chaking.Node;
     if( typeof node === 'undefined' ){
         this.node = null;

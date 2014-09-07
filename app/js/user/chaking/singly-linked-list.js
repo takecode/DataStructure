@@ -4,7 +4,7 @@ var Chaking = Chaking || {};
 
 Chaking.SinglyLinkedList = function(){
     var Node = Chaking.Node;
-    var Iterator = Chaking.Iterator;
+    var Iterator = Chaking.SinglyLinkedListIterator;
     this.firstNode = null;
     this.getBegin = function(){
         return new Iterator( this.firstNode );
@@ -74,7 +74,7 @@ Chaking.SinglyLinkedList = function(){
     };
 };
 
-Chaking.Iterator = function( node ){
+Chaking.SinglyLinkedListIterator = function( node ){
     var Node = Chaking.Node;
     if( typeof node === 'undefined' ){
         this.node = null;

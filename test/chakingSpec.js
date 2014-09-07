@@ -15,7 +15,7 @@ describe('Chaking Test', function() {
 });
 
 describe( 'Iterator Test', function(){
-    var Iterator = Chaking.Iterator;
+    var Iterator = Chaking.ListStructure.Iterator;
     var Node = Chaking.Node;
     var nodeArray = [];
 
